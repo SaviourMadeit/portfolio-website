@@ -352,8 +352,8 @@ const Portfolio = () => {
                 {/* Replace this with your actual profile image */}
                 <div className="relative w-full h-full rounded-3xl overflow-hidden border-4 border-blue-400/20 shadow-2xl shadow-blue-500/20">
                   <img 
-                    src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&q=80" 
-                    alt="Workspace"
+                    src="/images/profile_photo.jpg" 
+                    alt="Profile"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
