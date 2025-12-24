@@ -851,7 +851,7 @@ The system implements adaptive filtering to distinguish between normal pipeline 
             <div className="inline-flex items-center space-x-3 mb-4">
               <Code className="w-10 h-10 text-blue-400" />
               <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Featured Projects
+                Explored Project
               </h2>
             </div>
             <p className={`text-xl max-w-2xl mx-auto ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
