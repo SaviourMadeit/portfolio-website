@@ -795,47 +795,6 @@ The system implements adaptive filtering to distinguish between normal pipeline 
               ))}
             </div>
 
-            {/* Quick Navigation */}
-            <div className={`mt-12 rounded-xl border backdrop-blur-sm animate-in slide-in-from-bottom duration-700 ${
-              isDark 
-                ? 'bg-slate-800/50 border-slate-700' 
-                : 'bg-white/50 border-gray-200'
-            }`} style={{ animationDelay: '300ms' }}>
-              <div className="p-6">
-                <h3 className={`text-xl font-bold mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                  Quick Navigation
-                </h3>
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                  {['projects', 'tech-blog', 'impact', 'skills', 'about-me'].map((item) => (
-                    <button
-                      key={item}
-                      onClick={() => scrollToSection(item)}
-                      className={`py-3 rounded-lg transition-all duration-300 text-center ${
-                        activeSection === item 
-                          ? (isDark 
-                              ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-500/50' 
-                              : 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-500/30'
-                            )
-                          : (isDark 
-                              ? 'text-gray-300 hover:text-white hover:bg-slate-700/50' 
-                              : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
-                            )
-                      }`}
-                    >
-                      <div className="flex flex-col items-center space-y-1">
-                        {item === 'projects' && <Code className="w-5 h-5" />}
-                        {item === 'tech-blog' && <BookOpen className="w-5 h-5" />}
-                        {item === 'impact' && <Target className="w-5 h-5" />}
-                        {item === 'skills' && <Cpu className="w-5 h-5" />}
-                        {item === 'about-me' && <Mail className="w-5 h-5" />}
-                        <span className="text-sm font-medium capitalize">{item.replace('-', ' ')}</span>
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-
             {/* Scroll Indicator */}
             <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
               <ChevronDown className={`w-8 h-8 ${isDark ? 'text-blue-400/50' : 'text-blue-500/50'}`} />
