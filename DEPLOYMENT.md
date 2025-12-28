@@ -21,7 +21,7 @@ Before deploying, ensure:
 
 ---
 
-## Option 1: Netlify (Recommended 🏆)
+## Option 1: Netlify (Recommended )
 
 **Best for**: Beginners, automatic deployments
 

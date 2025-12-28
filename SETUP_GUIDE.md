@@ -13,6 +13,7 @@ npm run dev
 ## ⚙️ Essential Configuration
 
 ### Google Analytics Setup
+
 **IMPORTANT**: Update this BEFORE deploying!
 
 1. **Get Your Tracking ID**:
@@ -21,6 +22,7 @@ npm run dev
    - Copy your Measurement ID (format: `G-XXXXXXXXXX`)
 
 2. **Update `index.html`** (2 places):
+
    ```html
    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_ID_HERE"></script>
    <script>
@@ -42,6 +44,7 @@ npm run dev
 ### Color Schemes
 
 #### Primary Colors (Hero & Main CTAs)
+
 - From: Blue (`from-blue-500`)
 - Via: Purple (`via-purple-500`)
 - To: Pink (`to-pink-400`)
@@ -49,12 +52,14 @@ npm run dev
 **Change it**: Find `from-blue-500 to-purple-500` and replace with your colors.
 
 #### Project Card Gradients
+
 ```jsx
 // In projects array, update 'gradient' property:
 gradient: "from-green-400 to-emerald-600"  // Change colors
 ```
 
 Available Tailwind colors:
+
 - Blue: `blue-400`, `blue-500`, `blue-600`
 - Purple: `purple-400`, `purple-500`, `purple-600`
 - Pink: `pink-400`, `pink-500`, `pink-600`
@@ -65,11 +70,13 @@ Available Tailwind colors:
 ### Button Styling
 
 Secondary buttons (light background):
+
 ```jsx
 className="bg-white/50 backdrop-blur-sm border border-gray-300"
 ```
 
 Primary buttons (gradient):
+
 ```jsx
 className="bg-gradient-to-r from-blue-500 to-purple-500"
 ```
@@ -77,11 +84,13 @@ className="bg-gradient-to-r from-blue-500 to-purple-500"
 ### Dark Mode Colors
 
 Dark text colors:
+
 - `text-gray-300` = light gray (good on dark bg)
 - `text-gray-400` = medium gray
 - `text-gray-500` = dark gray
 
 Light mode:
+
 - `text-gray-700` = dark gray (on light bg)
 - `text-gray-800` = darker gray
 - `text-gray-900` = almost black
@@ -94,6 +103,7 @@ Light mode:
 
 1. Save image to `/public/images/`
 2. Update project entry:
+
 ```jsx
 {
   image: "/images/your-project-name.jpg",
@@ -105,11 +115,13 @@ Light mode:
 ```
 
 ### Profile Image
+
 - Path: `/public/images/Profile_1.jpg`
 - Size: Recommended 400x400px
 - Format: JPG or PNG
 
 ### Banner Image
+
 - Path: `/public/images/Workshop.jpg`
 - Size: Recommended 1200x400px
 - Format: JPG or PNG
@@ -121,13 +133,17 @@ Light mode:
 The contact form uses native `mailto:` (no backend needed).
 
 ### To change recipient email:
+
 Find this line in `src/App.jsx`:
+
 ```jsx
 const mailtoLink = `mailto:Senamdagadusaviour@gmail.com?subject=...`
 ```
+
 Replace with your email address.
 
 ### To add backend email handling:
+
 1. Use service like Formspree, Netlify Forms, or AWS SES
 2. Update `handleFormSubmit` function
 3. Remove `window.location.href = mailtoLink`
@@ -137,6 +153,7 @@ Replace with your email address.
 ## 🔗 Social Links
 
 Update these URLs in the hero section:
+
 ```jsx
 // GitHub
 href="https://github.com/YOUR_USERNAME"
@@ -156,6 +173,7 @@ href="mailto:your-email@example.com"
 ## 📊 Analytics Events (Custom)
 
 To track custom events, add this anywhere in React:
+
 ```jsx
 // Track button click
 <button onClick={() => {
@@ -189,23 +207,27 @@ Before deploying, verify:
 ## 🌐 Deployment Options
 
 ### GitHub Pages (Recommended for Beginners)
+
 ```bash
 npm run build
 # Push dist folder to gh-pages branch
 ```
 
 ### Netlify (Easiest)
+
 1. Connect GitHub repo to Netlify
 2. Set build command: `npm run build`
 3. Set publish: `dist`
 4. Deploy (automatic on push)
 
 ### Vercel (Full-Featured)
+
 1. Import from GitHub
 2. Auto-detected Vite config
 3. One-click deploy
 
 ### Traditional Hosting
+
 ```bash
 npm run build
 # Upload /dist folder to your web server
@@ -216,6 +238,7 @@ npm run build
 ## 🔒 Privacy & Security
 
 ✅ **Already Implemented**:
+
 - No external trackers (except GA)
 - No user data collection
 - No backend database
@@ -227,12 +250,14 @@ npm run build
 ## 📈 Monitoring Performance
 
 ### Lighthouse Audit
+
 1. Open DevTools (F12)
 2. Go to "Lighthouse" tab
 3. Click "Analyze page load"
 4. Target: 95+ on all categories
 
 ### Google Analytics Monitoring
+
 1. Check real-time visitors
 2. Track most viewed sections
 3. Monitor button click-through rates
@@ -243,6 +268,7 @@ npm run build
 ## 🎓 Customization Examples
 
 ### Add New Skill
+
 ```jsx
 {
   category: "Web Development",
@@ -253,6 +279,7 @@ npm run build
 ```
 
 ### Add New Certification
+
 ```jsx
 {
   id: 7,
@@ -268,6 +295,7 @@ npm run build
 ```
 
 ### Add New Testimonial
+
 ```jsx
 {
   id: 5,
@@ -285,21 +313,25 @@ npm run build
 ## ❓ Troubleshooting
 
 ### Images not showing?
+
 - Check file names are exact (case-sensitive)
 - Verify `/public/images/` folder exists
 - Ensure paths start with `/images/`
 
 ### Styles not updating?
+
 - Hard refresh: `Ctrl+Shift+R` (Windows) or `Cmd+Shift+R` (Mac)
 - Clear browser cache
 - Rebuild: `npm run build`
 
 ### Contact form not working?
+
 - Ensure email client configured on device
 - Test on different browser
 - Check console for errors (F12)
 
 ### Theme not persisting?
+
 - Check localStorage enabled
 - Browser storage settings
 - Try private/incognito window
@@ -319,6 +351,7 @@ npm run build
 ## 💬 Support
 
 Need help? Check these:
+
 1. README.md (full documentation)
 2. This file (setup guide)
 3. Code comments in `src/App.jsx`
