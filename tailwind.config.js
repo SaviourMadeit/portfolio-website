@@ -5,7 +5,33 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        // Custom color additions
+        'brand': {
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#bae6fd',
+          300: '#7dd3fc',
+          400: '#38bdf8',
+          500: '#0ea5e9',
+          600: '#0284c7',
+          700: '#0369a1',
+          800: '#075985',
+          900: '#0c3d66',
+        },
+      },
+      backgroundImage: {
+        'gradient-brand': 'linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899)',
+        'gradient-tech': 'linear-gradient(135deg, #06b6d4, #3b82f6)',
+        'gradient-success': 'linear-gradient(135deg, #10b981, #34d399)',
+      },
+      boxShadow: {
+        'glow-blue': '0 0 20px rgba(59, 130, 246, 0.5)',
+        'glow-purple': '0 0 20px rgba(139, 92, 246, 0.5)',
+        'glow-pink': '0 0 20px rgba(236, 72, 153, 0.5)',
+      },
+    },
   },
   plugins: [],
 }
