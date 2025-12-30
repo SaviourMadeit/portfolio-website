@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Twitter, Mail, MapPin, ExternalLink, Menu as MenuIcon, X, Code, Cpu, Zap, BookOpen, ChevronRight, ChevronLeft, Terminal, Layers, ChevronDown, Award, Briefcase, Play, Video, Maximize2, Sun, Moon, Users, Target, Heart, Globe, FileText, Sparkles, Shield, Smartphone, Database, Cloud, Server, Mic, Camera, Wifi, Bluetooth, Radio, Settings, Power, Image, Quote } from 'lucide-react';
+import { Github, Linkedin, Twitter, Mail, MapPin, ExternalLink, Menu as MenuIcon, X, Code, Cpu, Zap, BookOpen, ChevronRight, ChevronLeft, Terminal, Layers, ChevronDown, Award, Briefcase, Play, Video, Maximize2, Sun, Moon, Users, Target, Heart, Globe, FileText, Sparkles, Shield, Smartphone, Database, Cloud, Server, Mic, Camera, Wifi, Bluetooth, Radio, Settings, Power, Image, Quote, LucideSmartphone } from 'lucide-react';
 const Chip = Cpu;
 
 const Portfolio = () => {
@@ -399,23 +399,23 @@ The system implements adaptive filtering to distinguish between normal pipeline 
   const certifications = [
     {
       id: 1,
-      title: "IoT Fundamentals Specialization",
-      issuer: "Coursera",
-      date: "March 2024",
-      credentialId: "UC-XXXXXXXX",
-      credentialUrl: "#",
-      category: "IoT",
-      icon: Smartphone,
+      title: "Advanced Embedded Systems on Arm",
+      issuer: "Edx",
+      date: "May 2023",
+      credentialId: "6229a86a2590471f87619db23addc1c3",
+      credentialUrl: "https://courses.edx.org/certificates/6229a86a2590471f87619db23addc1c3",
+      category: "IoT, Embedded Systems",
+      icon: LucideSmartphone,
       color: "from-blue-400 to-cyan-400"
     },
     {
       id: 2,
-      title: "Embedded Systems Design",
+      title: "Machine Learning at the Edge on Arm",
       issuer: "edX",
-      date: "January 2024",
-      credentialId: "edX-XXXXXXXX",
-      credentialUrl: "#",
-      category: "Hardware",
+      date: " June 2023",
+      credentialId: "32ff043d08b9445caf20412403d37ccd",
+      credentialUrl: "https://courses.edx.org/certificates/32ff043d08b9445caf20412403d37ccd",
+      category: "Machine Learning on Edge",
       icon: Cpu,
       color: "from-purple-400 to-pink-400"
     },
@@ -508,13 +508,13 @@ The system implements adaptive filtering to distinguish between normal pipeline 
     {
       category: "Embedded Systems",
       icon: Chip,
-      items: ["STM32", "ESP32", "RP2040", "Raspberry Pi", "Arduino", "FreeRTOS", "SPI/I2C/UART/CAN"],
+      items: ["STM32", "ESP32", "Raspberry Pi", "Arduino", "FreeRTOS", "SPI/I2C/UART/CAN"],
       color: "from-blue-400 to-cyan-400"
     },
     {
       category: "Programming",
       icon: Code,
-      items: ["C/C++", "Python", "Assembly (ARM/AVR)", "Arduino Framework", "ESP-IDF"],
+      items: ["C/C++", "Python", "Assembly (ARM/AVR)", "Gitbash"],
       color: "from-purple-400 to-pink-400"
     },
     {
