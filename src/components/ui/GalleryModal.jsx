@@ -80,7 +80,7 @@ const GalleryModal = ({
 							<button
 								key={idx}
 								onClick={() => setGalleryIndex(idx)}
-								className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${
+								className={`shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${
 									idx === galleryIndex
 										? "border-blue-400 scale-110"
 										: "border-white/20 hover:border-white/50 opacity-70 hover:opacity-100"

@@ -33,7 +33,7 @@ export const renderDescriptionWithBullets = (text) => {
 									key={idx}
 									className="flex items-start space-x-3 text-gray-300"
 								>
-									<span className="text-blue-400 font-bold mt-0.5 flex-shrink-0">
+									<span className="text-blue-400 font-bold mt-0.5 shrink-0">
 										•
 									</span>
 									<span>{line.replace("•", "").trim()}</span>

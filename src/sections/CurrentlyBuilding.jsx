@@ -104,7 +104,7 @@ const CurrentlyBuilding = ({ isDark }) => {
 												key={idx}
 												className={`flex items-start space-x-3 ${isDark ? "text-gray-300" : "text-gray-700"}`}
 											>
-												<ChevronRight className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" />
+												<ChevronRight className="w-5 h-5 text-amber-400 mt-0.5 shrink-0" />
 												<span>{item}</span>
 											</li>
 										))}
