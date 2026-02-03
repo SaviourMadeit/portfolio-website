@@ -7,7 +7,7 @@ const Projects = ({ isDark, projects, setExpandedProject }) => {
 				<div className="text-center mb-16 animate-in slide-in-from-bottom duration-700">
 					<div className="inline-flex items-center space-x-3 mb-4">
 						<Code className="w-10 h-10 text-blue-400" />
-						<h2 className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+						<h2 className="text-5xl font-bold bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
 							Explored Project
 						</h2>
 					</div>
@@ -39,7 +39,7 @@ const Projects = ({ isDark, projects, setExpandedProject }) => {
 										className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
 									/>
 									<div
-										className={`absolute inset-0 bg-gradient-to-t ${
+										className={`absolute inset-0 bg-linear-to-t ${
 											isDark
 												? "from-black/60 to-transparent"
 												: "from-black/40 to-transparent"
@@ -78,7 +78,7 @@ const Projects = ({ isDark, projects, setExpandedProject }) => {
 											</span>
 										</div>
 										<div
-											className={`w-12 h-12 rounded-lg bg-gradient-to-br ${project.gradient} flex items-center justify-center`}
+											className={`w-12 h-12 rounded-lg bg-linear-to-br ${project.gradient} flex items-center justify-center`}
 										>
 											<Icon className="w-6 h-6 text-white" />
 										</div>

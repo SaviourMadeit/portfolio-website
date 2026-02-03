@@ -3,6 +3,7 @@
 ## Quick Start
 
 ### 1. Installation
+
 ```bash
 npm install
 npm run dev
@@ -17,25 +18,26 @@ npm run dev
 **IMPORTANT**: Update this BEFORE deploying!
 
 1. **Get Your Tracking ID**:
-   - Go to [Google Analytics](https://analytics.google.com)
-   - Create new property for your portfolio
-   - Copy your Measurement ID (format: `G-XXXXXXXXXX`)
+    - Go to [Google Analytics](https://analytics.google.com)
+    - Create new property for your portfolio
+    - Copy your Measurement ID (format: `G-XXXXXXXXXX`)
 
 2. **Update `index.html`** (2 places):
 
-   ```html
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_ID_HERE"></script>
-   <script>
-     gtag('config', 'G-YOUR_ID_HERE', {
-   ```
-   Replace `G-XXXXXXXXXX` with your actual ID (appears 2 times)
+    ```html
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_ID_HERE"></script>
+    <script>
+      gtag('config', 'G-YOUR_ID_HERE', {
+    ```
+
+    Replace `G-XXXXXXXXXX` with your actual ID (appears 2 times)
 
 3. **What you can track**:
-   - Page views
-   - User engagement
-   - Section visits
-   - Button clicks
-   - Form submissions
+    - Page views
+    - User engagement
+    - Section visits
+    - Button clicks
+    - Form submissions
 
 ---
 
@@ -55,7 +57,7 @@ npm run dev
 
 ```jsx
 // In projects array, update 'gradient' property:
-gradient: "from-green-400 to-emerald-600"  // Change colors
+gradient: "from-green-400 to-emerald-600"; // Change colors
 ```
 
 Available Tailwind colors:
@@ -72,13 +74,13 @@ Available Tailwind colors:
 Secondary buttons (light background):
 
 ```jsx
-className="bg-white/50 backdrop-blur-sm border border-gray-300"
+className = "bg-white/50 backdrop-blur-sm border border-gray-300";
 ```
 
 Primary buttons (gradient):
 
 ```jsx
-className="bg-gradient-to-r from-blue-500 to-purple-500"
+className = "bg-linear-to-r from-blue-500 to-purple-500";
 ```
 
 ### Dark Mode Colors
@@ -137,7 +139,7 @@ The contact form uses native `mailto:` (no backend needed).
 Find this line in `src/App.jsx`:
 
 ```jsx
-const mailtoLink = `mailto:Senamdagadusaviour@gmail.com?subject=...`
+const mailtoLink = `mailto:Senamdagadusaviour@gmail.com?subject=...`;
 ```
 
 Replace with your email address.
@@ -156,16 +158,16 @@ Update these URLs in the hero section:
 
 ```jsx
 // GitHub
-href="https://github.com/YOUR_USERNAME"
+href = "https://github.com/YOUR_USERNAME";
 
 // LinkedIn
-href="https://www.linkedin.com/in/YOUR_PROFILE"
+href = "https://www.linkedin.com/in/YOUR_PROFILE";
 
 // Twitter
-href="https://twitter.com/YOUR_HANDLE"
+href = "https://twitter.com/YOUR_HANDLE";
 
 // Email
-href="mailto:your-email@example.com"
+href = "mailto:your-email@example.com";
 ```
 
 ---
@@ -176,12 +178,16 @@ To track custom events, add this anywhere in React:
 
 ```jsx
 // Track button click
-<button onClick={() => {
-  gtag('event', 'button_click', {
-    'button_name': 'Download Resume',
-    'section': 'hero'
-  });
-}}>Download Resume</button>
+<button
+	onClick={() => {
+		gtag("event", "button_click", {
+			button_name: "Download Resume",
+			section: "hero",
+		});
+	}}
+>
+	Download Resume
+</button>
 ```
 
 ---

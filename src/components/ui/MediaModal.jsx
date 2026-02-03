@@ -5,7 +5,7 @@ const MediaModal = ({ media, onClose }) => {
 
 	return (
 		<div
-			className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 animate-in fade-in"
+			className="fixed inset-0 z-100 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 animate-in fade-in"
 			onClick={onClose}
 		>
 			<div

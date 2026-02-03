@@ -7,7 +7,7 @@ const CurrentlyBuilding = ({ isDark }) => {
 				<div className="text-center mb-16 animate-in slide-in-from-bottom duration-700">
 					<div className="inline-flex items-center space-x-3 mb-4">
 						<Sparkles className="w-10 h-10 text-amber-400" />
-						<h2 className="text-5xl font-bold bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
+						<h2 className="text-5xl font-bold bg-linear-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
 							Currently Building
 						</h2>
 					</div>
@@ -25,7 +25,7 @@ const CurrentlyBuilding = ({ isDark }) => {
 							: "bg-white/50 border-gray-300"
 					}`}
 				>
-					<div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-amber-500/10 to-orange-500/10 rounded-full blur-3xl -z-10"></div>
+					<div className="absolute top-0 right-0 w-64 h-64 bg-linear-to-br from-amber-500/10 to-orange-500/10 rounded-full blur-3xl -z-10"></div>
 
 					<div className="p-8 md:p-12">
 						<div className="grid md:grid-cols-2 gap-12 items-center">
@@ -33,7 +33,7 @@ const CurrentlyBuilding = ({ isDark }) => {
 							<div className="space-y-6">
 								<div>
 									<div className="inline-flex items-center space-x-2 mb-4">
-										<div className="w-3 h-3 rounded-full bg-gradient-to-r from-amber-400 to-orange-400 animate-pulse"></div>
+										<div className="w-3 h-3 rounded-full bg-linear-to-r from-amber-400 to-orange-400 animate-pulse"></div>
 										<span
 											className={`text-sm font-semibold ${isDark ? "text-amber-400" : "text-amber-600"}`}
 										>
@@ -167,7 +167,7 @@ const CurrentlyBuilding = ({ isDark }) => {
 													}`}
 												>
 													<div
-														className="h-full bg-gradient-to-r from-amber-400 to-orange-400 transition-all duration-500"
+														className="h-full bg-linear-to-r from-amber-400 to-orange-400 transition-all duration-500"
 														style={{
 															width: `${item.progress}%`,
 														}}

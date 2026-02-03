@@ -182,11 +182,11 @@ const Portfolio = () => {
 
 	return (
 		<div
-			className={`min-h-screen transition-colors duration-500 ${isDark ? "bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-gray-100" : "bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-900"} overflow-hidden`}
+			className={`min-h-screen transition-colors duration-500 ${isDark ? "bg-linear-to-br from-slate-950 via-slate-900 to-slate-950 text-gray-100" : "bg-linear-to-br from-gray-50 via-white to-gray-100 text-gray-900"} overflow-hidden`}
 		>
 			{/* Scroll Progress Bar */}
 			<div
-				className="fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 z-50 transition-all duration-300"
+				className="fixed top-0 left-0 h-1 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 z-50 transition-all duration-300"
 				style={{ width: `${scrollProgress}%` }}
 			/>
 
@@ -217,7 +217,7 @@ const Portfolio = () => {
 			{/* Skip to Content Link for Accessibility */}
 			<a
 				href="#projects"
-				className="absolute top-0 left-0 -translate-y-full focus:translate-y-0 bg-blue-500 text-white px-4 py-2 z-[60] transition-transform"
+				className="absolute top-0 left-0 -translate-y-full focus:translate-y-0 bg-blue-500 text-white px-4 py-2 z-60 transition-transform"
 				aria-label="Skip to main content"
 			>
 				Skip to main content

@@ -12,7 +12,7 @@ const Impact = ({
 				<div className="text-center mb-16 animate-in slide-in-from-bottom duration-700">
 					<div className="inline-flex items-center space-x-3 mb-4">
 						<Target className="w-10 h-10 text-blue-400" />
-						<h2 className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+						<h2 className="text-5xl font-bold bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
 							Community Impact
 						</h2>
 					</div>
@@ -38,12 +38,12 @@ const Impact = ({
 								style={{ animationDelay: `${index * 100}ms` }}
 							>
 								<div
-									className={`absolute inset-0 bg-gradient-to-br ${activity.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl`}
+									className={`absolute inset-0 bg-linear-to-br ${activity.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl`}
 								/>
 
 								<div className="relative">
 									<div
-										className={`w-16 h-16 mb-6 rounded-xl bg-gradient-to-br ${activity.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500`}
+										className={`w-16 h-16 mb-6 rounded-xl bg-linear-to-br ${activity.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500`}
 									>
 										<Icon className="w-8 h-8 text-white" />
 									</div>
@@ -69,7 +69,7 @@ const Impact = ({
 												}`}
 											>
 												<span
-													className={`w-2 h-2 rounded-full bg-gradient-to-r ${activity.color} mt-2 group-hover:scale-150 transition-transform`}
+													className={`w-2 h-2 rounded-full bg-linear-to-r ${activity.color} mt-2 group-hover:scale-150 transition-transform`}
 												/>
 												<span className="text-sm">
 													{item}

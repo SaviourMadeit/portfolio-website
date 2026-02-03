@@ -36,7 +36,7 @@ const Navbar = ({
 								className={`absolute inset-0 rounded-full blur-xl transition-colors ${isDark ? "bg-blue-400/20 group-hover:bg-blue-300/30" : "bg-blue-500/20 group-hover:bg-blue-600/30"}`}
 							/>
 						</div>
-						<span className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+						<span className="text-2xl font-bold bg-linear-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
 							Saviour Dagadu
 						</span>
 					</div>
@@ -57,8 +57,8 @@ const Navbar = ({
 								className={`capitalize px-6 py-2 rounded-lg transition-all duration-300 ${
 									activeSection === item
 										? isDark
-											? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-500/50"
-											: "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-500/30"
+											? "bg-linear-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-500/50"
+											: "bg-linear-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-500/30"
 										: isDark
 											? "text-gray-300 hover:text-white hover:bg-slate-800/50"
 											: "text-gray-600 hover:text-gray-900 hover:bg-gray-100"

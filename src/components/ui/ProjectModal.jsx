@@ -6,11 +6,11 @@ const ProjectModal = ({ project, onClose, setSelectedMedia }) => {
 
 	return (
 		<div
-			className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 animate-in fade-in"
+			className="fixed inset-0 z-100 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 animate-in fade-in"
 			onClick={onClose}
 		>
 			<div
-				className="relative max-w-6xl w-full max-h-[90vh] overflow-y-auto rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700"
+				className="relative max-w-6xl w-full max-h-[90vh] overflow-y-auto rounded-2xl bg-linear-to-br from-slate-900 to-slate-800 border border-slate-700"
 				onClick={(e) => e.stopPropagation()}
 			>
 				<button
@@ -26,7 +26,7 @@ const ProjectModal = ({ project, onClose, setSelectedMedia }) => {
 						<div>
 							<div className="flex items-center gap-3 mb-4">
 								<div
-									className={`w-12 h-12 rounded-lg bg-gradient-to-br ${project.gradient} flex items-center justify-center`}
+									className={`w-12 h-12 rounded-lg bg-linear-to-br ${project.gradient} flex items-center justify-center`}
 								>
 									<project.icon className="w-6 h-6 text-white" />
 								</div>
@@ -134,7 +134,7 @@ const ProjectModal = ({ project, onClose, setSelectedMedia }) => {
 										href={project.links.website}
 										target="_blank"
 										rel="noopener noreferrer"
-										className="flex-1 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg font-semibold text-white text-center hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+										className="flex-1 px-6 py-3 bg-linear-to-r from-blue-500 to-purple-500 rounded-lg font-semibold text-white text-center hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
 									>
 										<ExternalLink className="w-5 h-5" />
 										Live Site

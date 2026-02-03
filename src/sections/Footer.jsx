@@ -13,7 +13,7 @@ const Footer = ({ isDark }) => {
 				<div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
 					<div className="flex items-center space-x-3">
 						<Cpu className="w-8 h-8 text-blue-400" />
-						<span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+						<span className="text-xl font-bold bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
 							Saviour Dagadu
 						</span>
 					</div>

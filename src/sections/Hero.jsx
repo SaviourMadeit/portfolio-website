@@ -23,8 +23,8 @@ const Hero = ({ isDark, scrollToSection, stats }) => {
 					<div
 						className={`relative h-64 rounded-2xl overflow-hidden mb-4 animate-in slide-in-from-bottom duration-700 bg-cover bg-center ${
 							isDark
-								? "bg-gradient-to-r from-slate-800 to-slate-900"
-								: "bg-gradient-to-r from-blue-50 to-gray-100"
+								? "bg-linear-to-r from-slate-800 to-slate-900"
+								: "bg-linear-to-r from-blue-50 to-gray-100"
 						}`}
 						style={{ backgroundImage: "url(/images/Workshop.jpg)" }}
 					>
@@ -54,7 +54,7 @@ const Hero = ({ isDark, scrollToSection, stats }) => {
 							<div className="absolute -top-20 left-8 z-20">
 								<div className="relative group">
 									{/* Outer ring */}
-									<div className="absolute -inset-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-0 group-hover:opacity-100 blur-md transition-all duration-500"></div>
+									<div className="absolute -inset-2 bg-linear-to-r from-blue-500 to-purple-500 rounded-full opacity-0 group-hover:opacity-100 blur-md transition-all duration-500"></div>
 
 									{/* Profile image */}
 									<div
@@ -144,7 +144,7 @@ const Hero = ({ isDark, scrollToSection, stats }) => {
 							<div className="flex flex-wrap gap-4">
 								<button
 									onClick={() => scrollToSection("projects")}
-									className="group px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg font-semibold text-white shadow-lg shadow-blue-500/50 hover:shadow-xl hover:shadow-blue-500/70 transition-all hover:scale-105 flex items-center space-x-2"
+									className="group px-8 py-3 bg-linear-to-r from-blue-500 to-purple-500 rounded-lg font-semibold text-white shadow-lg shadow-blue-500/50 hover:shadow-xl hover:shadow-blue-500/70 transition-all hover:scale-105 flex items-center space-x-2"
 								>
 									<span>View Portfolio</span>
 									<ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -181,7 +181,7 @@ const Hero = ({ isDark, scrollToSection, stats }) => {
 								<a
 									href="/Saviour_Dagadu_CV.pdf"
 									download="Saviour_Dagadu_CV.pdf"
-									className="group px-8 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg font-semibold text-white shadow-lg shadow-emerald-500/50 hover:shadow-xl hover:shadow-emerald-500/70 transition-all hover:scale-105 flex items-center space-x-2"
+									className="group px-8 py-3 bg-linear-to-r from-emerald-500 to-teal-500 rounded-lg font-semibold text-white shadow-lg shadow-emerald-500/50 hover:shadow-xl hover:shadow-emerald-500/70 transition-all hover:scale-105 flex items-center space-x-2"
 								>
 									<FileText className="w-5 h-5" />
 									<span>Download Resume</span>
@@ -223,7 +223,7 @@ const Hero = ({ isDark, scrollToSection, stats }) => {
 												: "text-blue-500 group-hover:text-blue-600"
 										}`}
 									/>
-									<div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-1">
+									<div className="text-3xl font-bold bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-1">
 										{stat.value}
 									</div>
 									<div

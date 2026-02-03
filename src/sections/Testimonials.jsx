@@ -9,7 +9,7 @@ const Testimonials = ({ isDark, testimonials }) => {
 				<div className="text-center mb-16 animate-in slide-in-from-bottom duration-700">
 					<div className="inline-flex items-center space-x-3 mb-4">
 						<Quote className="w-10 h-10 text-yellow-400" />
-						<h2 className="text-5xl font-bold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+						<h2 className="text-5xl font-bold bg-linear-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
 							What Others Say
 						</h2>
 					</div>
@@ -33,7 +33,7 @@ const Testimonials = ({ isDark, testimonials }) => {
 							style={{ animationDelay: `${index * 100}ms` }}
 						>
 							<div
-								className={`absolute inset-0 bg-gradient-to-br from-yellow-400/10 to-orange-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+								className={`absolute inset-0 bg-linear-to-br from-yellow-400/10 to-orange-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
 							/>
 
 							<div className="relative p-8">

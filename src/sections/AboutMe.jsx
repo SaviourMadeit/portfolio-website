@@ -14,8 +14,8 @@ const AboutMe = ({
 				<div
 					className={`relative backdrop-blur-xl rounded-3xl border p-12 overflow-hidden animate-in slide-in-from-bottom duration-700 mb-16 ${
 						isDark
-							? "bg-gradient-to-br from-green-500/10 via-emerald-500/10 to-teal-500/10 border-green-400/20"
-							: "bg-gradient-to-br from-green-500/5 via-emerald-500/5 to-teal-500/5 border-green-400/30"
+							? "bg-linear-to-br from-green-500/10 via-emerald-500/10 to-teal-500/10 border-green-400/20"
+							: "bg-linear-to-br from-green-500/5 via-emerald-500/5 to-teal-500/5 border-green-400/30"
 					}`}
 				>
 					<div className="relative text-center space-y-8 mb-12">
@@ -24,7 +24,7 @@ const AboutMe = ({
 						</div>
 
 						<div>
-							<h2 className="text-5xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-4">
+							<h2 className="text-5xl font-bold bg-linear-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-4">
 								Get In Touch
 							</h2>
 							<p
@@ -134,7 +134,7 @@ const AboutMe = ({
 						{/* Submit Button */}
 						<button
 							type="submit"
-							className="w-full py-4 px-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg font-bold text-white text-lg shadow-lg shadow-green-500/50 hover:shadow-xl hover:shadow-green-500/70 transition-all hover:scale-105 flex items-center justify-center space-x-2"
+							className="w-full py-4 px-6 bg-linear-to-r from-green-500 to-emerald-500 rounded-lg font-bold text-white text-lg shadow-lg shadow-green-500/50 hover:shadow-xl hover:shadow-green-500/70 transition-all hover:scale-105 flex items-center justify-center space-x-2"
 						>
 							<Mail className="w-5 h-5" />
 							<span>Send Message</span>
@@ -153,8 +153,8 @@ const AboutMe = ({
 				<div
 					className={`relative backdrop-blur-xl rounded-3xl border p-12 overflow-hidden animate-in slide-in-from-bottom duration-700 ${
 						isDark
-							? "bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 border-blue-400/20"
-							: "bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5 border-blue-400/30"
+							? "bg-linear-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 border-blue-400/20"
+							: "bg-linear-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5 border-blue-400/30"
 					}`}
 				>
 					<div
@@ -166,7 +166,7 @@ const AboutMe = ({
 							<Mail className="w-20 h-20 mx-auto text-blue-400 mb-6 animate-bounce-slow" />
 						</div>
 
-						<h2 className="text-5xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+						<h2 className="text-5xl font-bold bg-linear-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
 							Let's Build Something Amazing
 						</h2>
 
@@ -183,7 +183,7 @@ const AboutMe = ({
 						<div className="flex flex-col sm:flex-row justify-center gap-6 pt-8">
 							<a
 								href="mailto:Senamdagadusaviour@gmail.com"
-								className="group px-10 py-5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl font-bold text-lg shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 transition-all hover:scale-105 flex items-center justify-center space-x-3 text-white"
+								className="group px-10 py-5 bg-linear-to-r from-blue-500 to-purple-500 rounded-xl font-bold text-lg shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 transition-all hover:scale-105 flex items-center justify-center space-x-3 text-white"
 							>
 								<Mail className="w-6 h-6 group-hover:rotate-12 transition-transform" />
 								<span>Send Email</span>

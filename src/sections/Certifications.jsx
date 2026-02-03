@@ -7,7 +7,7 @@ const Certifications = ({ isDark, certifications }) => {
 				<div className="text-center mb-16 animate-in slide-in-from-bottom duration-700">
 					<div className="inline-flex items-center space-x-3 mb-4">
 						<Award className="w-10 h-10 text-purple-400" />
-						<h2 className="text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+						<h2 className="text-5xl font-bold bg-linear-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
 							Certifications
 						</h2>
 					</div>
@@ -34,13 +34,13 @@ const Certifications = ({ isDark, certifications }) => {
 							>
 								{/* Gradient Background */}
 								<div
-									className={`absolute inset-0 bg-gradient-to-br ${cert.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+									className={`absolute inset-0 bg-linear-to-br ${cert.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
 								/>
 
 								<div className="relative p-8">
 									{/* Icon */}
 									<div
-										className={`w-16 h-16 mb-6 rounded-xl bg-gradient-to-br ${cert.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500`}
+										className={`w-16 h-16 mb-6 rounded-xl bg-linear-to-br ${cert.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500`}
 									>
 										<Icon className="w-8 h-8 text-white" />
 									</div>
