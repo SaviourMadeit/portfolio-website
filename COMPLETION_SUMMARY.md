@@ -46,7 +46,7 @@ Congratulations! Your fully-featured portfolio website has been built with profe
 
 ## 📂 File Structure
 
-```
+```TREE
 portfolio-website/
 ├── 📄 README.md              ← Full documentation
 ├── 📄 SETUP_GUIDE.md         ← Configuration guide

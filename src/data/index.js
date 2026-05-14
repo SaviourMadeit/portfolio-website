@@ -221,8 +221,7 @@ export const impactActivities = [
 		icon: Users,
 		items: [
 			"Organized IoT workshops for local tech communities",
-			"Mentored 50+ students in embedded systems",
-			"Volunteer at Ghana Code Club",
+			"Mentored 250+ students in Robotics and Phyical Computing",
 			"Tech speaker at regional conferences",
 		],
 		color: "from-blue-400 to-cyan-400",
@@ -241,13 +240,14 @@ export const impactActivities = [
 		category: "Mentorship",
 		icon: Target,
 		items: [
-			"One-on-one mentoring for aspiring embedded engineers",
+			"Provided internship opportunities for University students",
 			"University project guidance",
 			"Career counseling for tech students",
-			"Open office hours for Q&A sessions",
+			"Trained 30+ ICT Teachers in IoT and embedded systems"
 		],
 		color: "from-green-400 to-emerald-400",
 		gallery: [
+			"/images/mentorship\SSCS_2024.jpg",
 			"https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80",
 			"https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80",
 			"https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80",
