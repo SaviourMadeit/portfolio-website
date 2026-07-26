@@ -179,7 +179,7 @@ const Hero = ({ isDark, scrollToSection, stats }) => {
 								</a>
 
 								<a
-									href="/Saviour_Dagadu_CV.pdf"
+									href="/public/docs/Saviour_Dagadu_CV.pdf"
 									download="Saviour_Dagadu_CV.pdf"
 									className="group px-8 py-3 bg-linear-to-r from-emerald-500 to-teal-500 rounded-lg font-semibold text-white shadow-lg shadow-emerald-500/50 hover:shadow-xl hover:shadow-emerald-500/70 transition-all hover:scale-105 flex items-center space-x-2"
 								>

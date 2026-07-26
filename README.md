@@ -298,7 +298,6 @@ npm run build
 ## 📝 Project Structure
 
 ```
-
 portfolio-website/
 ├── public/
 │   ├── images/
@@ -316,7 +315,6 @@ portfolio-website/
 ├── vite.config.js       # Vite config
 ├── tailwind.config.js   # Tailwind config
 └── README.md            # This file
-
 ```
 
 ---
