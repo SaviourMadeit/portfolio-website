@@ -10,8 +10,9 @@ import {
 	MapPin,
 	Users,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const Hero = ({ isDark, scrollToSection, stats }) => {
+const Hero = ({ isDark, stats }) => {
 	return (
 		<section
 			id="home"
@@ -142,13 +143,13 @@ const Hero = ({ isDark, scrollToSection, stats }) => {
 
 							{/* Action Buttons */}
 							<div className="flex flex-wrap gap-4">
-								<button
-									onClick={() => scrollToSection("projects")}
+								<Link
+									to="/portfolio"
 									className="group px-8 py-3 bg-linear-to-r from-blue-500 to-purple-500 rounded-lg font-semibold text-white shadow-lg shadow-blue-500/50 hover:shadow-xl hover:shadow-blue-500/70 transition-all hover:scale-105 flex items-center space-x-2"
 								>
 									<span>View Portfolio</span>
 									<ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-								</button>
+								</Link>
 
 								<a
 									href="https://github.com/SaviourMadeit"

@@ -1,14 +1,41 @@
+import { useState } from "react";
+import { useOutletContext } from "react-router-dom";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
-const AboutMe = ({
-	isDark,
-	formData,
-	handleFormChange,
-	handleFormSubmit,
-	formSubmitted,
-}) => {
+const Contact = () => {
+	const { isDark } = useOutletContext();
+	const [formData, setFormData] = useState({
+		name: "",
+		email: "",
+		subject: "",
+		message: "",
+	});
+	const [formSubmitted, setFormSubmitted] = useState(false);
+
+	const handleFormChange = (e) => {
+		const { name, value } = e.target;
+		setFormData((prev) => ({ ...prev, [name]: value }));
+	};
+
+	const handleFormSubmit = (e) => {
+		e.preventDefault();
+		if (
+			formData.name &&
+			formData.email &&
+			formData.subject &&
+			formData.message
+		) {
+			const mailtoLink = `mailto:Senamdagadusaviour@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`From: ${formData.name} (${formData.email})\n\n${formData.message}`)}`;
+			window.location.href = mailtoLink;
+
+			setFormSubmitted(true);
+			setFormData({ name: "", email: "", subject: "", message: "" });
+			setTimeout(() => setFormSubmitted(false), 3000);
+		}
+	};
+
 	return (
-		<section id="about-me" className="relative py-32 px-4">
+		<section className="relative pt-32 pb-32 px-4">
 			<div className="max-w-4xl mx-auto">
 				{/* Contact Form Section */}
 				<div
@@ -24,9 +51,9 @@ const AboutMe = ({
 						</div>
 
 						<div>
-							<h2 className="text-5xl font-bold bg-linear-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-4">
+							<h1 className="text-5xl font-bold bg-linear-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-4">
 								Get In Touch
-							</h2>
+							</h1>
 							<p
 								className={`text-xl max-w-2xl mx-auto ${isDark ? "text-gray-300" : "text-gray-700"}`}
 							>
@@ -149,7 +176,7 @@ const AboutMe = ({
 					</form>
 				</div>
 
-				{/* Original About Me Section */}
+				{/* CTA + Social Links */}
 				<div
 					className={`relative backdrop-blur-xl rounded-3xl border p-12 overflow-hidden animate-in slide-in-from-bottom duration-700 ${
 						isDark
@@ -260,4 +287,4 @@ const AboutMe = ({
 	);
 };
 
-export default AboutMe;
+export default Contact;

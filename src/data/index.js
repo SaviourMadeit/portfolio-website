@@ -247,7 +247,7 @@ export const impactActivities = [
 		],
 		color: "from-green-400 to-emerald-400",
 		gallery: [
-			"/images/mentorship\SSCS_2024.jpg",
+			"/images/mentorship/SSCS_2024.jpg",
 			"https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80",
 			"https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80",
 			"https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80",
@@ -480,4 +480,49 @@ export const stats = [
 	{ label: "Lines of Code", value: "50K+", icon: Terminal },
 	{ label: "Workshops Conducted", value: "10+", icon: Users },
 	{ label: "Open Source Repos", value: "8+", icon: Github },
+];
+
+export const services = [
+	{
+		title: "Embedded Systems Design",
+		icon: Cpu,
+		description:
+			"Custom firmware and hardware architecture for microcontroller-based products, from concept through production, built on STM32, ESP32, and AVR platforms.",
+		color: "from-blue-400 to-cyan-400",
+	},
+	{
+		title: "Firmware Development",
+		icon: Code,
+		description:
+			"Low-level and real-time firmware in C/C++ with FreeRTOS, covering drivers, communication protocols (SPI/I2C/UART/CAN), and power-optimized designs.",
+		color: "from-purple-400 to-pink-400",
+	},
+	{
+		title: "PCB & Hardware Design",
+		icon: Layers,
+		description:
+			"Schematic capture and PCB layout in KiCad/Eagle, sensor integration, and mixed-signal system design ready for fabrication.",
+		color: "from-green-400 to-emerald-400",
+	},
+	{
+		title: "IoT Solutions",
+		icon: Wifi,
+		description:
+			"End-to-end connected device systems: sensor networks, edge computing, cloud sync, and dashboards for real-time monitoring and control.",
+		color: "from-orange-400 to-red-400",
+	},
+	{
+		title: "Robotics Mentorship & Workshops",
+		icon: Users,
+		description:
+			"Hands-on training and mentorship for individuals and teams looking to build robotics and embedded systems skills, from fundamentals to advanced projects.",
+		color: "from-indigo-400 to-blue-400",
+	},
+	{
+		title: "Technical Consulting",
+		icon: Briefcase,
+		description:
+			"Design reviews, feasibility studies, and technical guidance to help you make the right hardware and firmware decisions before you build.",
+		color: "from-yellow-400 to-orange-400",
+	},
 ];
