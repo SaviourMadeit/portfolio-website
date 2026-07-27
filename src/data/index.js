@@ -2,12 +2,19 @@
 import {
 	Award,
 	Briefcase,
+	Camera,
+	CircuitBoard,
 	Code,
 	Cpu,
 	Github,
 	Heart,
 	Layers,
 	LucideSmartphone,
+	Music,
+	Network,
+	Plug,
+	ShieldAlert,
+	ShieldCheck,
 	Target,
 	Terminal,
 	Users,
@@ -482,7 +489,8 @@ export const stats = [
 	{ label: "Open Source Repos", value: "8+", icon: Github },
 ];
 
-export const services = [
+// Category 1: Embedded systems / firmware / IoT engineering services
+export const engineeringServices = [
 	{
 		title: "Embedded Systems Design",
 		icon: Cpu,
@@ -526,3 +534,71 @@ export const services = [
 		color: "from-yellow-400 to-orange-400",
 	},
 ];
+
+// Category 2: Security & electrical installation services (BIXYL LAB IT Consult)
+export const securityElectricalServices = [
+	{
+		title: "Access Control Systems",
+		icon: ShieldCheck,
+		description:
+			"Card, biometric, and keypad access control installation for homes, offices, and gated facilities.",
+		color: "from-sky-400 to-blue-500",
+	},
+	{
+		title: "CCTV Surveillance Systems",
+		icon: Camera,
+		description:
+			"Full CCTV design, installation, and setup — analog and IP camera systems with remote monitoring.",
+		color: "from-blue-400 to-indigo-500",
+	},
+	{
+		title: "DJ Par Light Repair & Maintenance",
+		icon: Music,
+		description:
+			"Diagnosis, repair, and upkeep of DJ and stage par lighting equipment for events and venues.",
+		color: "from-cyan-400 to-sky-500",
+	},
+	{
+		title: "PCB Custom Board Design",
+		icon: CircuitBoard,
+		description:
+			"Custom PCB design for one-off or small-batch electronic projects, from schematic to fabrication-ready layout.",
+		color: "from-blue-400 to-cyan-400",
+	},
+	{
+		title: "Networking",
+		icon: Network,
+		description:
+			"Structured cabling, LAN/WAN setup, and network configuration for homes, offices, and small businesses.",
+		color: "from-indigo-400 to-blue-500",
+	},
+	{
+		title: "Electrical Wiring (Commercial & Domestic)",
+		icon: Plug,
+		description:
+			"Safe, code-compliant electrical wiring installation and repair for commercial and residential properties.",
+		color: "from-sky-500 to-blue-600",
+	},
+	{
+		title: "Electric Fence & Security Alarm Systems",
+		icon: ShieldAlert,
+		description:
+			"Electric perimeter fencing and alarm system installation to secure homes, offices, and compounds.",
+		color: "from-blue-500 to-indigo-600",
+	},
+];
+
+// BIXYL LAB IT Consult — company & contact info
+export const bixylLab = {
+	name: "BIXYL LAB IT Consult",
+	tagline:
+		"Professional electrical engineering services designed to deliver safety, precision, and long-lasting reliability.",
+	phone: "024-891-9044",
+	phoneHref: "tel:+233248919044",
+	email: "bixyllabitconsult@gmail.com",
+	address: "Accra, East Legon",
+	mapLink:
+		"https://www.google.com/maps/place/Bixyl+Lab+IT+Consult/@5.6213717,-0.2646752,17.76z/data=!4m14!1m7!3m6!1s0xfdf9917a0af4771:0xa1ff6e35645cd185!2sBixyl+Lab+IT+Consult!8m2!3d5.6208906!4d-0.2651723!16s%2Fg%2F11zh3785r3!3m5!1s0xfdf9917a0af4771:0xa1ff6e35645cd185!8m2!3d5.6208906!4d-0.2651723!16s%2Fg%2F11zh3785r3",
+	mapEmbedSrc: "https://www.google.com/maps?q=5.6208906,-0.2651723&z=17&output=embed",
+};
+

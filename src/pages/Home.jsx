@@ -1,12 +1,12 @@
 import { ChevronRight } from "lucide-react";
 import { Link, useOutletContext } from "react-router-dom";
 import Hero from "../sections/Hero";
-import { projects, services, stats } from "../data";
+import { engineeringServices, projects, stats } from "../data";
 
 const Home = () => {
 	const { isDark } = useOutletContext();
 	const featuredProjects = projects.filter((p) => p.featured).slice(0, 3);
-	const featuredServices = services.slice(0, 3);
+	const featuredServices = engineeringServices.slice(0, 3);
 
 	return (
 		<>
