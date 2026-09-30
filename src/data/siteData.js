@@ -26,10 +26,10 @@ import {
 } from "lucide-react";
 
 export const siteProfile = {
-  name: "Saviour Dagadu",
-  tagline: "Embedded Systems Engineer • Firmware Developer • Robotics Mentor",
+  name: "Bixyl Lab IT Consult",
+  tagline: "IT Support • Security Systems • Event Technology • Electrical Solutions",
   intro:
-    "I design reliable embedded hardware and firmware that works in real environments — from concept and PCB design to deployed IoT systems and robotics education.",
+    "Bixyl Lab IT Consult delivers a complete range of practical technology and technical support services, including IT infrastructure, CCTV and security systems, electrical installations, event lighting, sound and stage equipment, and maintenance support for homes, businesses, venues, and live productions.",
   email: "Senamdagadusaviour@gmail.com",
   phone: "+233 24 891 9044",
   phoneHref: "tel:+233248919044",
@@ -37,7 +37,7 @@ export const siteProfile = {
   locationLink: "https://maps.google.com/?q=Accra,+Ghana",
   github: "https://github.com/SaviourMadeit",
   linkedin: "https://www.linkedin.com/in/saviour-dagadu",
-  brand: "Saviour Dagadu",
+  brand: "Bixyl Lab IT Consult",
 };
 
 export const NAV_LINKS = [
@@ -58,60 +58,75 @@ export const stats = [
   { label: "Client satisfaction", value: "96%", icon: ShieldCheck },
 ];
 
+export const professionalRoles = [
+  "Embedded Systems Engineer",
+  "Firmware Developer",
+  "Hardware Designer",
+  "Robotics Mentor",
+  "Product and Systems Consultant",
+];
+
+export const educationBackground = [
+  "Practical technical education and hands-on engineering training",
+  "Electronics and embedded systems learning through project-based work",
+  "Continuous professional development in IT, automation, and systems support",
+  "Mentorship and STEM education for emerging technology learners",
+];
+
+export const businessVision =
+  "To become a trusted technology partner that delivers practical, reliable, and innovative solutions for homes, businesses, schools, venues, and event environments.";
+
+export const businessMission =
+  "To provide dependable IT support, security, electrical, and event technology services that improve performance, safety, and client confidence through honest expertise and quality execution.";
+
+export const businessPurpose =
+  "To help people and organizations solve real technical problems using smart, safe, and sustainable systems that support growth, productivity, and memorable experiences.";
+
 export const services = [
   {
-    id: "embedded-system-design",
-    title: "Embedded Systems Design",
+    id: "it-support",
+    title: "IT Support & Infrastructure",
     description:
-      "Custom microcontroller hardware and firmware architecture for dependable products from concept to production.",
-    highlights: ["STM32", "ESP32", "AVR", "System architecture"],
+      "Reliable IT support for homes, businesses, and event venues, including device setup, system troubleshooting, networking, and infrastructure maintenance.",
+    highlights: ["Computer support", "Network setup", "System troubleshooting", "IT maintenance"],
     icon: Cpu,
-    color: "from-blue-500 to-cyan-500",
+    color: "from-sky-500 to-cyan-500",
   },
   {
-    id: "firmware-development",
-    title: "Firmware Development",
+    id: "cctv-access-security",
+    title: "CCTV, Access & Security Systems",
     description:
-      "Low-level and real-time firmware development in C/C++ with robust drivers, power optimization, and protocol integration.",
-    highlights: ["C/C++", "FreeRTOS", "UART / I2C / SPI / CAN", "Testing"],
-    icon: Terminal,
+      "Installation and support for CCTV, access control, and security monitoring solutions that strengthen safety and protect people and assets.",
+    highlights: ["CCTV installation", "Access control", "Security upgrades", "System maintenance"],
+    icon: ShieldCheck,
     color: "from-violet-500 to-fuchsia-500",
   },
   {
-    id: "pcb-hardware-design",
-    title: "PCB & Hardware Design",
+    id: "electrical-power-solutions",
+    title: "Electrical & Power Solutions",
     description:
-      "Schematic capture, PCB layout, sensor integration, and mixed-signal systems designed for manufacturability and performance.",
-    highlights: ["KiCad", "Altium", "Power design", "Signal integrity"],
-    icon: Layers,
-    color: "from-emerald-500 to-teal-500",
-  },
-  {
-    id: "iot-solutions",
-    title: "IoT Solutions",
-    description:
-      "Connected device platforms for monitoring, automation, analytics, and remote operations across industrial and community use cases.",
-    highlights: ["LoRa", "WiFi", "MQTT", "Cloud integration"],
-    icon: Wifi,
+      "Safe and practical electrical support for homes, offices, commercial sites, and live event spaces with a focus on reliability and protection.",
+    highlights: ["Electrical works", "Power systems", "Safety checks", "Load planning"],
+    icon: Building2,
     color: "from-amber-500 to-orange-500",
   },
   {
-    id: "robotics-mentorship",
-    title: "Robotics & STEM Training",
+    id: "lighting-effects-events",
+    title: "Stage Lighting, Fog, Haze & Laser Effects & Event Technology",
     description:
-      "Hands-on robotics workshops and technical coaching for schools, clubs, startups, and emerging technology teams.",
-    highlights: ["Workshops", "STEM coaching", "Hands-on labs", "Youth empowerment"],
-    icon: GraduationCap,
-    color: "from-pink-500 to-rose-500",
+      "Complete stage and event technology support for concerts, churches, gatherings, and venue productions, from lighting to control systems and effects.",
+    highlights: ["Stage lights", "Fog & haze", "Laser effects", "Event control systems"],
+    icon: Terminal,
+    color: "from-emerald-500 to-teal-500",
   },
   {
-    id: "product-consulting",
-    title: "Product Consulting",
+    id: "repair-support",
+    title: "Maintenance, Repair & Technical Support",
     description:
-      "Technical guidance for founders and teams to clarify requirements, validate architecture, and reduce development risk.",
-    highlights: ["Architecture reviews", "Roadmaps", "Debugging", "Launch support"],
+      "Fast fault diagnosis, preventive maintenance, and repair support for lighting systems, electrical equipment, and technical installations.",
+    highlights: ["Fault diagnosis", "On-site support", "Preventive care", "Equipment repair"],
     icon: Rocket,
-    color: "from-sky-500 to-indigo-500",
+    color: "from-pink-500 to-rose-500",
   },
 ];
 
@@ -136,6 +151,23 @@ export const portfolioProjects = [
   },
   {
     id: 2,
+    title: "Robotics Educational Kit",
+    category: "STEM Learning & Robotics",
+    summary:
+      "A flexible robotics learning kit designed to teach practical electronics, coding, automation, and problem solving in an editable format.",
+    description:
+      "This program is built for educational environments where learners can explore sensors, robotics behavior, motion control, and prototyping while gaining hands-on technical confidence.",
+    tech: ["Robotics", "STEM curriculum", "Sensors", "Editable kit design"],
+    featured: true,
+    image: "/images/projects/robotics-kit.jpg",
+    links: {
+      github: "https://github.com/SaviourMadeit",
+    },
+    gradient: "from-cyan-500 to-blue-600",
+    icon: GraduationCap,
+  },
+  {
+    id: 3,
     title: "ProSense AG-X",
     category: "Edge Controller",
     summary:
@@ -244,72 +276,72 @@ export const certifications = [
 export const testimonials = [
   {
     id: 1,
-    name: "Mr. Kwame Mensah",
-    title: "Project Manager",
-    company: "The Makersplace",
+    name: "Mr. Kofi Boateng",
+    title: "Event Coordinator",
+    company: "Accra Events Hub",
     testimonial:
-      "Working with Saviour on the Farm King project was incredible. His ability to translate complex requirements into working hardware solutions is remarkable.",
+      "Bixyl Lab IT Consult brought professionalism and reliability to our stage lighting setup. The team understood the event flow and solved issues quickly on site.",
   },
   {
     id: 2,
-    name: "Dr. Kofi Appiah",
-    title: "Robotics Instructor & Mentor",
-    company: "Ghana Code Club",
+    name: "Mrs. Afia Mensah",
+    title: "Facility Manager",
+    company: "Apex Community Centre",
     testimonial:
-      "Saviour's passion for teaching and mentoring is contagious. His workshops are engaging, practical, and leave learners inspired to build real systems.",
+      "Their security and electrical support helped us improve safety and confidence across our venue. The work was clean, efficient, and well organized.",
   },
   {
     id: 3,
-    name: "Nana Owusu",
-    title: "Junior Embedded Engineer",
-    company: "Tech Startup",
+    name: "Mr. Daniel Owusu",
+    title: "Business Owner",
+    company: "Crestview Studio",
     testimonial:
-      "Saviour's mentorship transformed my understanding of IoT systems. His practical guidance made difficult concepts feel accessible and actionable.",
+      "We needed dependable technical support and fast troubleshooting. Bixyl Lab handled everything with practical expertise and excellent communication.",
   },
 ];
 
 export const skills = [
   {
-    category: "Embedded Systems",
-    items: ["STM32", "ESP32", "Raspberry Pi", "AVR", "FreeRTOS", "SPI/I2C/UART/CAN"],
+    category: "IT & Network Support",
+    items: ["Computer setup", "Network installation", "System troubleshooting", "Device support", "Business IT maintenance"],
     icon: Cpu,
   },
   {
-    category: "Programming",
-    items: ["C/C++", "Python", "Assembly (ARM/AVR)", "Git"],
-    icon: Code,
+    category: "Security Systems",
+    items: ["CCTV installation", "Access control", "Surveillance setup", "Security upgrades", "System checks"],
+    icon: ShieldCheck,
   },
   {
-    category: "Hardware Design",
-    items: ["KiCad", "Altium Designer", "PCB Design", "Sensor Integration", "Mixed-Signal Systems"],
+    category: "Electrical & Power",
+    items: ["Electrical installation", "Power troubleshooting", "Safety checks", "Load planning", "System diagnostics"],
     icon: Layers,
   },
   {
-    category: "IoT & Connectivity",
-    items: ["LoRa", "WiFi", "Bluetooth", "MQTT", "WebSocket", "REST APIs"],
+    category: "Event & AV Technology",
+    items: ["Stage lighting", "Fog & haze", "Laser effects", "Console support", "Live event setup"],
     icon: Wifi,
   },
   {
-    category: "Leadership & Education",
-    items: ["Workshops", "Mentorship", "STEM training", "Technical coaching"],
+    category: "Maintenance & Support",
+    items: ["On-site repairs", "Preventive maintenance", "Technical support", "Client consultation", "Operational reliability"],
     icon: Users,
   },
 ];
 
 export const aboutHighlights = [
   {
-    title: "Embedded by training",
-    description: "I work across hardware, firmware, and systems thinking to deliver practical, production-ready engineering outcomes.",
+    title: "One trusted technical brand",
+    description: "Bixyl Lab IT Consult brings together IT, security, electrical, and event technology under a practical, client-first service model.",
     icon: Sparkles,
   },
   {
-    title: "Mentor and educator",
-    description: "I help students and teams turn ideas into working technical prototypes while building confidence and capability.",
+    title: "Service-first execution",
+    description: "We focus on reliable solutions, responsive support, and professional delivery for homes, businesses, churches, and live event environments.",
     icon: BookOpen,
   },
   {
-    title: "Problem-first mindset",
-    description: "Every product decision is tied back to reliability, manufacturability, and the real constraints of the operating environment.",
+    title: "Problem-solving mindset",
+    description: "Every project is approached with a clear understanding of safety, performance, and the real needs of the client or event.",
     icon: Target,
   },
 ];
@@ -395,20 +427,20 @@ export const impactActivities = [
 
 export const securityElectricalServices = [
   {
-    title: "CCTV & Access Systems",
-    description: "Security installations and maintenance for homes, offices, and event environments.",
+    title: "Smart Security Solutions",
+    description: "CCTV, access control, and monitoring systems designed for safer homes, offices, venues, and commercial operations.",
     icon: ShieldCheck,
     color: "from-sky-500 to-indigo-500",
   },
   {
-    title: "Electrical Installations",
-    description: "Reliable electrical work designed for homes, offices, and small commercial spaces.",
+    title: "Electrical & Power Support",
+    description: "Electrical installation, maintenance, and troubleshooting for reliable power delivery in homes, businesses, and event spaces.",
     icon: Building2,
     color: "from-amber-500 to-orange-500",
   },
   {
-    title: "System Diagnostics",
-    description: "On-site troubleshooting, safety checks, and operational support for electrical and electronic systems.",
+    title: "Technical Diagnostics",
+    description: "On-site fault finding, preventive checks, and repair planning to keep critical systems running without disruptions.",
     icon: Gauge,
     color: "from-emerald-500 to-cyan-500",
   },

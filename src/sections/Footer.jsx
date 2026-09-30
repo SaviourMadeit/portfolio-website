@@ -3,10 +3,12 @@ import {
 	ArrowUp,
 	Cpu,
 	Github,
+	Instagram,
 	Linkedin,
 	Mail,
 	MapPin,
 	MessageCircle,
+	Phone,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { NAV_LINKS, engineeringServices, siteProfile } from "../data";
@@ -63,7 +65,7 @@ const Footer = ({ isDark }) => {
 							className={`inline-flex items-center gap-3 rounded-lg ${focusRing}`}
 						>
 							{logoFailed || !logoSrc ? (
-								<span className="w-10 h-10 rounded-xl bg-blue-500 flex items-center justify-center">
+								<span className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center shadow-lg shadow-blue-500/20">
 									<Cpu className="w-6 h-6 text-white" />
 								</span>
 							) : (
@@ -79,14 +81,13 @@ const Footer = ({ isDark }) => {
 									{siteProfile.name}
 								</span>
 								<span className="mt-1 text-[11px] font-semibold tracking-[0.18em] text-blue-500">
-									EMBEDDED SYSTEMS
+									TECHNOLOGY • SECURITY • EVENTS
 								</span>
 							</span>
 						</Link>
 
 						<p className={`mt-5 max-w-sm leading-relaxed ${muted}`}>
-							Building the bridge between software and silicon. Embedded
-							hardware, firmware, IoT and robotics training.
+							Delivering reliable IT support, security systems, electrical solutions, and event technology tailored to real-world needs.
 						</p>
 
 						<div className="mt-5 flex items-center -ml-2.5">
@@ -107,6 +108,31 @@ const Footer = ({ isDark }) => {
 								className={socialClasses}
 							>
 								<Linkedin className="w-5 h-5" />
+							</a>
+							<a
+								href={`https://wa.me/${WHATSAPP_NUMBER}`}
+								target="_blank"
+								rel="noreferrer"
+								aria-label="WhatsApp"
+								className={socialClasses}
+							>
+								<MessageCircle className="w-5 h-5" />
+							</a>
+							<a
+								href={`mailto:${siteProfile.email}`}
+								aria-label="Email"
+								className={socialClasses}
+							>
+								<Mail className="w-5 h-5" />
+							</a>
+							<a
+								href="https://www.instagram.com"
+								target="_blank"
+								rel="noreferrer"
+								aria-label="Instagram"
+								className={socialClasses}
+							>
+								<Instagram className="w-5 h-5" />
 							</a>
 						</div>
 					</div>
@@ -155,6 +181,15 @@ const Footer = ({ isDark }) => {
 									{siteProfile.email}
 								</a>
 							</li>
+							<li>
+								<a
+									href={`tel:${siteProfile.phoneHref.replace("tel:", "")}`}
+									className={`flex items-center gap-2 transition-colors hover:text-blue-500 ${focusRing} ${muted}`}
+								>
+									<Phone className="w-5 h-5 shrink-0 text-blue-500" />
+									{siteProfile.phone}
+								</a>
+							</li>
 							{WHATSAPP_NUMBER && (
 								<li>
 									<a
@@ -175,7 +210,7 @@ const Footer = ({ isDark }) => {
 						</ul>
 						<Link
 							to="/contact"
-							className={`mt-5 inline-flex items-center rounded-full bg-blue-500 hover:bg-blue-400 text-white text-sm font-semibold px-5 py-2.5 transition-colors ${focusRing}`}
+							className={`mt-5 inline-flex items-center rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:opacity-95 text-white text-sm font-semibold px-5 py-2.5 transition-colors ${focusRing}`}
 						>
 							Get a quote
 						</Link>

@@ -1,7 +1,26 @@
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+:root {
+  --brand-navy: #071a2d;
+  --brand-blue: #1d4ed8;
+  --brand-cyan: #06b6d4;
+  --brand-teal: #14b8a6;
+  --brand-slate: #0f172a;
+  --brand-soft: #e0f2fe;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(180deg, #f8fbff 0%, #eef6ff 100%);
+  color: var(--brand-slate);
+}
+
+body.dark {
+  background: linear-gradient(180deg, #020817 0%, #0f172a 100%);
+}
 
 /* Squared grid-paper background */
 .bg-grid-light {
