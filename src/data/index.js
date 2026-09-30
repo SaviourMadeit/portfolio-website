@@ -555,7 +555,7 @@ export const securityElectricalServices = [
 		title: "DJ Par Light Repair & Maintenance",
 		icon: Music,
 		description:
-			"Diagnosis, repair, and upkeep of DJ and stage par lighting equipment for events and venues.",
+			"Diagnosis, repair, and upkeep of DJ stage lighting equipments for events and venues.",
 		color: "from-cyan-400 to-sky-500",
 	},
 	{
