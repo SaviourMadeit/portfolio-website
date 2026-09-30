@@ -9,21 +9,9 @@ import {
 	MessageCircle,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { NAV_LINKS } from "../data/navLinks";
-import { engineeringServices } from "../data";
+import { NAV_LINKS, engineeringServices, siteProfile } from "../data";
 
-/* ------------------------------------------------------------------ */
-/* Things to fill in                                                   */
-/* ------------------------------------------------------------------ */
-const LOGO_LIGHT = "/images/bixyl/Logo.png";
-// Optional logo version for dark backgrounds. Leave "" to reuse LOGO_LIGHT.
-const LOGO_DARK = "/images/bixyl/Logo.png";
-const EMAIL = "Senamdagadusaviour@gmail.com";
-// International format, digits only (e.g. "233241234567"). Leave "" to hide WhatsApp.
 const WHATSAPP_NUMBER = "233248919044";
-const LOCATION = "Accra, Ghana";
-const GITHUB = "https://github.com/SaviourMadeit";
-const LINKEDIN = "https://www.linkedin.com/in/saviour-dagadu";
 
 const FONT = {
 	fontFamily:
@@ -35,7 +23,7 @@ const focusRing =
 
 const Footer = ({ isDark }) => {
 	const [logoFailed, setLogoFailed] = useState(false);
-	const logoSrc = isDark && LOGO_DARK ? LOGO_DARK : LOGO_LIGHT;
+	const logoSrc = null;
 
 	const ink = isDark ? "text-white" : "text-slate-900";
 	const muted = isDark ? "text-slate-400" : "text-slate-600";
@@ -71,7 +59,7 @@ const Footer = ({ isDark }) => {
 					<div>
 						<Link
 							to="/"
-							aria-label="Bixyl Lab IT Consult, home"
+							aria-label={`${siteProfile.brand}, home`}
 							className={`inline-flex items-center gap-3 rounded-lg ${focusRing}`}
 						>
 							{logoFailed || !logoSrc ? (
@@ -88,10 +76,10 @@ const Footer = ({ isDark }) => {
 							)}
 							<span className="flex flex-col leading-none">
 								<span className={`text-xl font-extrabold tracking-tight ${ink}`}>
-									Bixyl Lab
+									{siteProfile.name}
 								</span>
 								<span className="mt-1 text-[11px] font-semibold tracking-[0.18em] text-blue-500">
-									IT CONSULT
+									EMBEDDED SYSTEMS
 								</span>
 							</span>
 						</Link>
@@ -103,7 +91,7 @@ const Footer = ({ isDark }) => {
 
 						<div className="mt-5 flex items-center -ml-2.5">
 							<a
-								href={GITHUB}
+								href={siteProfile.github}
 								target="_blank"
 								rel="noopener noreferrer"
 								aria-label="GitHub"
@@ -112,7 +100,7 @@ const Footer = ({ isDark }) => {
 								<Github className="w-5 h-5" />
 							</a>
 							<a
-								href={LINKEDIN}
+								href={siteProfile.linkedin}
 								target="_blank"
 								rel="noopener noreferrer"
 								aria-label="LinkedIn"
@@ -160,11 +148,11 @@ const Footer = ({ isDark }) => {
 						<ul className="space-y-3">
 							<li>
 								<a
-									href={`mailto:${EMAIL}`}
+									href={`mailto:${siteProfile.email}`}
 									className={`flex items-start gap-2 transition-colors hover:text-blue-500 break-all ${focusRing} ${muted}`}
 								>
 									<Mail className="w-5 h-5 mt-0.5 shrink-0 text-blue-500" />
-									{EMAIL}
+									{siteProfile.email}
 								</a>
 							</li>
 							{WHATSAPP_NUMBER && (
@@ -182,7 +170,7 @@ const Footer = ({ isDark }) => {
 							)}
 							<li className={`flex items-center gap-2 ${muted}`}>
 								<MapPin className="w-5 h-5 shrink-0 text-blue-500" />
-								{LOCATION}
+								{siteProfile.location}
 							</li>
 						</ul>
 						<Link
@@ -199,8 +187,7 @@ const Footer = ({ isDark }) => {
 					className={`mt-14 pt-6 border-t flex flex-col sm:flex-row items-center justify-between gap-4 text-sm ${rule} ${muted}`}
 				>
 					<p>
-						© {new Date().getFullYear()} Bixyl Lab IT Consult. All rights
-						reserved.
+						© {new Date().getFullYear()} {siteProfile.brand}. All rights reserved.
 					</p>
 					<button
 						type="button"

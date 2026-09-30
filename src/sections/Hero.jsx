@@ -487,7 +487,7 @@ const Hero = ({ isDark, stats = [] }) => {
 						Embedded hardware and firmware that works outside the lab.
 					</h1>
 					<p className={`mt-6 text-lg max-w-xl leading-relaxed ${muted}`}>
-						Bixyl Lab IT Consult designs PCBs, writes firmware, builds IoT
+						I design and ship reliable embedded systems, firmware, IoT products, and robotics learning experiences
 						products and teaches robotics, from first schematic to a working
 						device.
 					</p>

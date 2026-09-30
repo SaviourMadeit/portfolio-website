@@ -8,18 +8,11 @@ import {
 } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
 import ThemeToggle from "../components/ui/ThemeToggle";
-import { NAV_LINKS } from "../data/navLinks";
+import { NAV_LINKS, siteProfile } from "../data";
 
-/* ------------------------------------------------------------------ */
-/* Things to fill in                                                   */
-/* ------------------------------------------------------------------ */
-// Put your logo in /public and point to it here (PNG, SVG or WebP).
-const LOGO_LIGHT = "/images/bixyl/Logo.png";
-// Optional: a version of the logo that reads on dark backgrounds. Leave "" to reuse LOGO_LIGHT.
-const LOGO_DARK = "";
-// International format, digits only (e.g. "233241234567"). Leave "" to hide WhatsApp buttons.
-const WHATSAPP_NUMBER = "";
-// Main call-to-action button.
+const LOGO_LIGHT = null;
+const LOGO_DARK = null;
+const WHATSAPP_NUMBER = "233248919044";
 const CTA = { label: "Get a quote", to: "/contact" };
 
 const NAV_FONT = {
@@ -41,7 +34,7 @@ const Brand = ({ isDark, onClick }) => {
 		<Link
 			to="/"
 			onClick={onClick}
-			aria-label="Bixyl Lab IT Consult, home"
+			aria-label={`${siteProfile.brand}, home`}
 			className={`flex items-center gap-3 rounded-lg ${focusRing}`}
 		>
 			{logoFailed || !logoSrc ? (
@@ -67,10 +60,10 @@ const Brand = ({ isDark, onClick }) => {
 				<span
 					className={`text-xl font-extrabold tracking-tight ${isDark ? "text-white" : "text-slate-900"}`}
 				>
-					Bixyl Lab
+					{siteProfile.name}
 				</span>
 				<span className="mt-1 text-[11px] font-semibold tracking-[0.18em] text-blue-500">
-					IT CONSULT
+					EMBEDDED SYSTEMS
 				</span>
 			</span>
 		</Link>
