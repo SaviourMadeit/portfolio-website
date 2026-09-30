@@ -21,3 +21,57 @@
 	background-size: 28px 28px;
 	background-position: center top;
 }
+
+/* Vertically scrolling image columns (banner marquee) */
+@keyframes marquee-up {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(-50%);
+	}
+}
+
+@keyframes marquee-down {
+	from {
+		transform: translateY(-50%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+.animate-marquee-up {
+	animation: marquee-up 22s linear infinite;
+}
+
+.animate-marquee-down {
+	animation: marquee-down 26s linear infinite;
+}
+
+.animate-marquee-up:hover,
+.animate-marquee-down:hover {
+	animation-play-state: paused;
+}
+
+/* Horizontally scrolling service cards (left to right) */
+@keyframes marquee-right {
+	from {
+		transform: translateX(-50%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+.animate-marquee-right {
+	animation: marquee-right 34s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.animate-marquee-up,
+	.animate-marquee-down,
+	.animate-marquee-right {
+		animation: none;
+	}
+}

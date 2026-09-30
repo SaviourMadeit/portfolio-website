@@ -383,7 +383,7 @@ export const certifications = [
 export const testimonials = [
 	{
 		id: 1,
-		name: "Prof. Kwame Mensah",
+		name: "",
 		title: "Department Head, Electronics Engineering",
 		company: "Accra Technical University",
 		testimonial:
@@ -393,7 +393,7 @@ export const testimonials = [
 	},
 	{
 		id: 2,
-		name: "Ama Boateng",
+		name: "Mr. Kwame Mensah",
 		title: "Project Manager",
 		company: "The Makersplace",
 		testimonial:
@@ -431,7 +431,7 @@ export const skills = [
 			"STM32",
 			"ESP32",
 			"Raspberry Pi",
-			"Arduino",
+			"AVR",
 			"FreeRTOS",
 			"SPI/I2C/UART/CAN",
 		],
@@ -448,7 +448,7 @@ export const skills = [
 		icon: Layers,
 		items: [
 			"KiCad",
-			"Eagle",
+			"Altium Designer",
 			"PCB Design",
 			"Sensor Integration",
 			"Mixed-Signal Systems",
@@ -555,7 +555,7 @@ export const securityElectricalServices = [
 		title: "DJ Par Light Repair & Maintenance",
 		icon: Music,
 		description:
-			"Diagnosis, repair, and upkeep of DJ stage lighting equipments for events and venues.",
+			"Diagnosis, repair, and upkeep of DJ and stage par lighting equipment for events and venues.",
 		color: "from-cyan-400 to-sky-500",
 	},
 	{
@@ -583,20 +583,20 @@ export const securityElectricalServices = [
 		title: "Electric Fence & Security Alarm Systems",
 		icon: ShieldAlert,
 		description:
-			"Electric perimeter fencing and alarm system installation to secure homes, offices, and compounds.",
+			"Electric fencing and alarm system installation to secure homes, offices, and compounds.",
 		color: "from-blue-500 to-indigo-600",
 	},
 ];
 
 // BIXYL LAB IT Consult — company & contact info
 export const bixylLab = {
-	name: "BIXYL LAB IT Consult",
+	name: "",
 	tagline:
 		"Professional electrical engineering services designed to deliver safety, precision, and long-lasting reliability.",
 	phone: "024-891-9044",
-	phoneHref: "tel:+233248919044",
+	phoneHref: "tel:+233 24 891 9044",
 	email: "bixyllabitconsult@gmail.com",
-	address: "Accra, East Legon",
+	address: "Accra, Ghana",
 	mapLink:
 		"https://www.google.com/maps/place/Bixyl+Lab+IT+Consult/@5.6213717,-0.2646752,17.76z/data=!4m14!1m7!3m6!1s0xfdf9917a0af4771:0xa1ff6e35645cd185!2sBixyl+Lab+IT+Consult!8m2!3d5.6208906!4d-0.2651723!16s%2Fg%2F11zh3785r3!3m5!1s0xfdf9917a0af4771:0xa1ff6e35645cd185!8m2!3d5.6208906!4d-0.2651723!16s%2Fg%2F11zh3785r3",
 	mapEmbedSrc: "https://www.google.com/maps?q=5.6208906,-0.2651723&z=17&output=embed",

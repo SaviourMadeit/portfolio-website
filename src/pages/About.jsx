@@ -18,11 +18,10 @@ const About = () => {
 					>
 						I'm Saviour Dagadu, an embedded hardware designer,
 						firmware developer, and robotics instructor based in
-						Accra, Ghana. I work at The Makersplace and with
-						Accra Technical University, building embedded systems
-						and IoT products, and mentoring the next generation
-						of engineers. This page is a placeholder for a fuller
-						bio — happy to help you write one when you're ready.
+						Accra, Ghana. I work at The Makersplace, building 
+						embedded systems and IoT products, and mentoring the 
+						next generation of engineers. This page is a placeholder 
+						for a fuller bio — happy to help you write one when you're ready.
 					</p>
 				</div>
 			</div>

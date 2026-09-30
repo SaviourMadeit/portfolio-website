@@ -12,75 +12,67 @@ const ServicesPage = () => {
 			<section className="relative px-4 py-16">
 				<div className="max-w-7xl mx-auto">
 					<div
-						className={`relative rounded-3xl border overflow-hidden ${
-							isDark
-								? "bg-slate-800/50 border-slate-700"
-								: "bg-white/60 border-gray-200"
+						className={`relative rounded-3xl border overflow-hidden bg-cover bg-center ${
+							isDark ? "border-slate-700" : "border-gray-200"
 						}`}
+						style={{
+							backgroundImage:
+								"url('/images/bixyl/banner-background.jpg')",
+						}}
 					>
-						<div className="grid lg:grid-cols-2">
-							{/* Copy side */}
-							<div className="relative z-10 p-10 md:p-14 flex flex-col justify-center">
-								<div className="flex items-center gap-3 mb-6">
-									<img
-										src="/images/bixyl/logo.png"
-										alt="BIXYL LAB IT Consult logo"
-										className="w-12 h-12 rounded-lg object-contain"
-									/>
-									<span
-										className={`text-sm font-semibold tracking-wide uppercase ${isDark ? "text-blue-400" : "text-blue-600"}`}
-									>
-										{bixylLab.name}
-									</span>
-								</div>
+						{/* Light/transparent overlay so the background image stays visible but text is readable */}
+						<div
+							className={`absolute inset-0 ${
+								isDark ? "bg-slate-900/75" : "bg-white/70"
+							}`}
+						/>
 
-								<h1
-									className={`text-4xl md:text-5xl font-bold mb-4 ${isDark ? "text-white" : "text-gray-900"}`}
+						<div className="relative z-10 px-10 md:px-14 py-16 md:py-24 max-w-2xl">
+							<div className="flex items-center gap-3 mb-6">
+								<img
+									src="/images/bixyl/logo.jpeg"
+									alt=""
+									className="w-50 h-50 rounded-lg object-contain"
+								/>
+								<span
+									className={`text-sm font-semibold tracking-wide uppercase ${isDark ? "text-blue-400" : "text-blue-600"}`}
 								>
-									Electrical, Security &amp; Embedded
-									Engineering Services
-								</h1>
-
-								<p
-									className={`text-lg mb-8 max-w-xl ${isDark ? "text-gray-300" : "text-gray-700"}`}
-								>
-									{bixylLab.tagline}
-								</p>
-
-								<div className="flex flex-wrap gap-4">
-									<Link
-										to="/contact"
-										className="group inline-flex items-center gap-2 px-8 py-4 bg-linear-to-r from-blue-500 to-purple-500 rounded-lg font-semibold text-white shadow-lg shadow-blue-500/40 hover:shadow-blue-500/60 hover:scale-105 transition-all duration-300"
-									>
-										<Calendar className="w-5 h-5" />
-										<span>Book Now</span>
-									</Link>
-									<a
-										href={bixylLab.phoneHref}
-										className={`inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold transition-all hover:scale-105 ${
-											isDark
-												? "bg-slate-700/50 border border-slate-600 text-gray-100 hover:bg-slate-600/50"
-												: "bg-white border border-gray-300 text-gray-900 hover:bg-gray-50"
-										}`}
-									>
-										<Phone className="w-5 h-5" />
-										<span>{bixylLab.phone}</span>
-									</a>
-								</div>
+									{bixylLab.name}
+								</span>
 							</div>
 
-							{/* Image side */}
-							<div className="relative min-h-[320px] lg:min-h-full grid grid-cols-2 gap-1 p-1">
-								<img
-									src="/images/bixyl/cctv-cameras.jpg"
-									alt="CCTV surveillance camera installation"
-									className="w-full h-full object-cover rounded-xl"
-								/>
-								<img
-									src="/images/bixyl/electrical-panel.jpg"
-									alt="Electrical panel wiring and networking work"
-									className="w-full h-full object-cover rounded-xl"
-								/>
+							<h1
+								className={`text-4xl md:text-5xl font-bold mb-4 ${isDark ? "text-white" : "text-gray-900"}`}
+							>
+								Electrical, Security &amp; Hardware
+								Engineering Services
+							</h1>
+
+							<p
+								className={`text-lg mb-8 max-w-xl ${isDark ? "text-gray-300" : "text-gray-700"}`}
+							>
+								{bixylLab.tagline}
+							</p>
+
+							<div className="flex flex-wrap gap-4">
+								<Link
+									to="/contact"
+									className="group inline-flex items-center gap-2 px-8 py-4 bg-linear-to-r from-blue-500 to-purple-500 rounded-lg font-semibold text-white shadow-lg shadow-blue-500/40 hover:shadow-blue-500/60 hover:scale-105 transition-all duration-300"
+								>
+									<Calendar className="w-5 h-5" />
+									<span>Book Now</span>
+								</Link>
+								<a
+									href={bixylLab.phoneHref}
+									className={`inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold transition-all hover:scale-105 ${
+										isDark
+											? "bg-slate-700/50 border border-slate-600 text-gray-100 hover:bg-slate-600/50"
+											: "bg-white border border-gray-300 text-gray-900 hover:bg-gray-50"
+									}`}
+								>
+									<Phone className="w-5 h-5" />
+									<span>{bixylLab.phone}</span>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -94,6 +86,7 @@ const ServicesPage = () => {
 					title="Embedded & Firmware Engineering"
 					subtitle="Hardware, firmware, and IoT solutions for product-focused engineering"
 					items={engineeringServices}
+					speed={34}
 				/>
 			</section>
 
@@ -106,6 +99,7 @@ const ServicesPage = () => {
 					title="Electrical & Security Systems"
 					subtitle="On-site installation and maintenance for homes, offices, and event venues"
 					items={securityElectricalServices}
+					speed={40}
 				/>
 			</section>
 
