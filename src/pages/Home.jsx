@@ -70,13 +70,11 @@ const Home = () => {
 					</div>
 
 					<div className="grid gap-4 sm:grid-cols-2">
-						{services.slice(0, 4).map(({ id, title, icon, color }, index) => (
+						{services.slice(0, 4).map(({ id, title, icon, color }) => (
 							<Link
 								key={id}
 								to={`/services#${id}`}
-								className={`group rounded-3xl border border-white/15 bg-slate-900/70 p-5 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-cyan-300/60 ${
-									index === 0 ? "sm:translate-y-6" : ""
-								}`}
+								className="group rounded-3xl border border-white/15 bg-slate-900/70 p-5 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-cyan-300/60"
 							>
 								<span
 									className={`inline-flex rounded-2xl bg-gradient-to-r ${color} p-3 text-white`}
