@@ -182,7 +182,7 @@ const Home = () => {
 							},
 							{
 								title: "Reliable technical work",
-								text: "We focus on careful setup, clear communication, and dependable operation—not just a quick fix.",
+								text: "We focus on careful setup, clear communication, and dependable operation not just a quick fix.",
 								icon: ShieldCheck,
 							},
 							{
@@ -206,15 +206,15 @@ const Home = () => {
 			<section className="px-4 py-20">
 				<div className="mx-auto flex max-w-6xl flex-col gap-6 rounded-3xl bg-gradient-to-r from-blue-950 via-blue-900 to-cyan-800 p-8 text-white shadow-2xl shadow-blue-950/20 md:flex-row md:items-center md:justify-between md:p-12">
 					<div>
-						<p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-200">
+						{/* <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-200">
 							<Clock3 className="h-4 w-4" />
 							Let’s get started
-						</p>
+						</p> */}
 						<h2 className="mt-3 max-w-2xl text-3xl font-bold">
 							Tell us what you need. We’ll help you find the right solution.
 						</h2>
 						<p className="mt-3 text-blue-100">
-							Contact Bixyl Lab IT & Engineering Consult for a service enquiry or project
+							Contact Us for a service enquiry or project
 							conversation.
 						</p>
 					</div>
