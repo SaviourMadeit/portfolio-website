@@ -214,7 +214,7 @@ const Home = () => {
 							Tell us what you need. We’ll help you find the right solution.
 						</h2>
 						<p className="mt-3 text-blue-100">
-							Contact Bixyl Lab IT Consult for a service enquiry or project
+							Contact Bixyl Lab IT & Engineering Consult for a service enquiry or project
 							conversation.
 						</p>
 					</div>

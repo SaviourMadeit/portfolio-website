@@ -25,7 +25,7 @@ const focusRing =
 
 const Footer = ({ isDark }) => {
 	const [logoFailed, setLogoFailed] = useState(false);
-	const logoSrc = null;
+	const logoSrc = "/images/bixyl/Logo.png";
 
 	const ink = isDark ? "text-white" : "text-slate-900";
 	const muted = isDark ? "text-slate-400" : "text-slate-600";
@@ -64,15 +64,15 @@ const Footer = ({ isDark }) => {
 							aria-label={`${siteProfile.brand}, home`}
 							className={`inline-flex items-center gap-3 rounded-lg ${focusRing}`}
 						>
-							{logoFailed || !logoSrc ? (
+							{logoFailed ? (
 								<span className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center shadow-lg shadow-blue-500/20">
 									<Cpu className="w-6 h-6 text-white" />
 								</span>
 							) : (
 								<img
 									src={logoSrc}
-									alt=""
-									className="h-10 w-auto"
+									alt={`${siteProfile.name} logo`}
+									className="h-12 w-12 shrink-0 rounded-xl object-contain"
 									onError={() => setLogoFailed(true)}
 								/>
 							)}
@@ -80,8 +80,8 @@ const Footer = ({ isDark }) => {
 								<span className={`text-xl font-extrabold tracking-tight ${ink}`}>
 									{siteProfile.name}
 								</span>
-								<span className="mt-1 text-[11px] font-semibold tracking-[0.18em] text-blue-500">
-									TECHNOLOGY • SECURITY • EVENTS
+								<span className="mt-1 text-xs font-medium tracking-wide text-cyan-500">
+									{siteProfile.tagline}
 								</span>
 							</span>
 						</Link>

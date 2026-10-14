@@ -1,5 +1,5 @@
 import { useOutletContext } from "react-router-dom";
-import { aboutHighlights, siteProfile, skills, testimonials } from "../data";
+import { skills, testimonials } from "../data";
 import Skills from "../sections/Skills";
 import Testimonials from "../sections/Testimonials";
 
@@ -11,10 +11,10 @@ const About = () => {
 			<div className="pt-32 pb-16 px-4">
 				<div className="max-w-5xl mx-auto text-center">
 					<h1 className="text-5xl font-bold bg-linear-to-r from-blue-500 via-cyan-500 to-teal-500 bg-clip-text text-transparent mb-6">
-						About Bixyl Lab IT Consult
+						About Bixyl Lab IT & Engineering Consult
 					</h1>
 					<p className={`text-xl leading-relaxed ${isDark ? "text-gray-300" : "text-gray-700"}`}>
-						Bixyl Lab IT Consult is a technology and service-driven business focused on practical solutions, reliable support, and smart systems for modern living, business growth, and event performance.
+						Bixyl Lab IT & Engineering Consult is a technology and service-driven business focused on practical solutions, reliable support, and smart systems for modern living, business growth, and event performance.
 					</p>
 				</div>
 			</div>
@@ -46,7 +46,7 @@ const About = () => {
 						<p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-500">Who we are</p>
 						<h2 className={`mt-4 text-3xl font-bold ${isDark ? "text-white" : "text-slate-900"}`}>A technical business built for service, safety, and results</h2>
 						<p className={`mt-4 leading-relaxed ${isDark ? "text-slate-300" : "text-slate-600"}`}>
-							Bixyl Lab IT Consult combines practical technical skills in embedded systems, IT support, security infrastructure, electrical installation, and event technology. Our work is built on a service mindset, strong troubleshooting ability, and a commitment to delivering dependable solutions in real environments.
+							Bixyl Lab IT & Engineering Consult combines practical technical skills in embedded systems, IT support, security infrastructure, electrical installation, and event technology. Our work is built on a service mindset, strong troubleshooting ability, and a commitment to delivering dependable solutions in real environments.
 						</p>
 					</div>
 					<div className={`rounded-3xl border p-8 ${isDark ? "border-slate-700 bg-slate-900/40" : "border-slate-200 bg-white/80"}`}>

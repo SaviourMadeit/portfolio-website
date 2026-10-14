@@ -10,8 +10,7 @@ import { Link, NavLink } from "react-router-dom";
 import ThemeToggle from "../components/ui/ThemeToggle";
 import { NAV_LINKS, siteProfile } from "../data";
 
-const LOGO_LIGHT = null;
-const LOGO_DARK = null;
+const LOGO = "/images/bixyl/Logo.png";
 const WHATSAPP_NUMBER = "233248919044";
 const CTA = { label: "Get a quote", to: "/contact" };
 
@@ -28,7 +27,6 @@ const focusRing =
 /* ------------------------------------------------------------------ */
 const Brand = ({ isDark, onClick }) => {
 	const [logoFailed, setLogoFailed] = useState(false);
-	const logoSrc = isDark && LOGO_DARK ? LOGO_DARK : LOGO_LIGHT;
 
 	return (
 		<Link
@@ -37,19 +35,19 @@ const Brand = ({ isDark, onClick }) => {
 			aria-label={`${siteProfile.brand}, home`}
 			className={`flex items-center gap-3 rounded-lg ${focusRing}`}
 		>
-			{logoFailed || !logoSrc ? (
+			{logoFailed ? (
 				// Fallback so the nav never shows a broken image
 				<span className="w-10 h-10 rounded-xl bg-blue-500 flex items-center justify-center">
 					<Cpu className="w-6 h-6 text-white" />
 				</span>
 			) : (
 				<img
-					src={logoSrc}
-					alt=""
-					className="h-10 w-auto"
+					src={LOGO}
+					alt={`${siteProfile.name} logo`}
+					className="h-12 w-12 shrink-0 rounded-xl object-contain"
 					onError={() => {
 						console.warn(
-							`[Navbar] Logo failed to load from "${logoSrc}". Open that URL directly in the browser to check it.`,
+							`[Navbar] Logo failed to load from "${LOGO}". Open that URL directly in the browser to check it.`,
 						);
 						setLogoFailed(true);
 					}}
@@ -58,12 +56,12 @@ const Brand = ({ isDark, onClick }) => {
 
 			<span className="flex flex-col leading-none">
 				<span
-					className={`text-xl font-extrabold tracking-tight ${isDark ? "text-white" : "text-slate-900"}`}
+					className={`text-base font-extrabold tracking-tight sm:text-lg ${isDark ? "text-white" : "text-slate-900"}`}
 				>
 					{siteProfile.name}
 				</span>
-				<span className="mt-1 text-[11px] font-semibold tracking-[0.18em] text-blue-500">
-					EMBEDDED SYSTEMS
+				<span className="mt-1 text-[10px] font-medium tracking-wide text-cyan-500 sm:text-xs">
+					{siteProfile.tagline}
 				</span>
 			</span>
 		</Link>

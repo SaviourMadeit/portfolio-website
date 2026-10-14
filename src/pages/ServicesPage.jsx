@@ -121,7 +121,7 @@ const ServicesPage = () => {
 
 										<div className="flex flex-col justify-center p-6 sm:p-9 lg:p-12">
 											<p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-400">
-												Bixyl Lab IT Consult
+												Bixyl Lab IT & Engineering Consult
 											</p>
 											<h3 className={`mt-3 text-2xl font-bold leading-tight sm:text-3xl ${ink}`}>
 												{title}

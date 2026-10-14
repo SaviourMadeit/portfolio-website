@@ -26,10 +26,10 @@ import {
 } from "lucide-react";
 
 export const siteProfile = {
-  name: "Bixyl Lab IT Consult",
-  tagline: "IT Support • Security Systems • Event Technology • Electrical Solutions",
+  name: "Bixyl Lab IT & Engineering Consult",
+  tagline: "Reliable Technology. Practical Solutions.",
   intro:
-    "Bixyl Lab IT Consult delivers a complete range of practical technology and technical support services, including IT infrastructure, CCTV and security systems, electrical installations, event lighting, sound and stage equipment, and maintenance support for homes, businesses, venues, and live productions.",
+    "Bixyl Lab IT & Engineering Consult delivers practical technology and engineering services, including IT infrastructure, embedded systems, CCTV and security systems, electrical installations, event lighting, stage equipment, and technical maintenance for homes, businesses, venues, and live productions.",
   email: "Senamdagadusaviour@gmail.com",
   phone: "+233 24 891 9044",
   phoneHref: "tel:+233248919044",
@@ -37,7 +37,7 @@ export const siteProfile = {
   locationLink: "https://maps.app.goo.gl/9JG7LTSKgdDkaihM9",
   github: "https://github.com/SaviourMadeit",
   linkedin: "https://www.linkedin.com/in/saviour-dagadu",
-  brand: "Bixyl Lab IT Consult",
+  brand: "Bixyl Lab IT & Engineering Consult",
 };
 
 export const NAV_LINKS = [
@@ -315,7 +315,7 @@ export const testimonials = [
     title: "Event Coordinator",
     company: "Accra Events Hub",
     testimonial:
-      "Bixyl Lab IT Consult brought professionalism and reliability to our stage lighting setup. The team understood the event flow and solved issues quickly on site.",
+      "Bixyl Lab IT & Engineering Consult brought professionalism and reliability to our stage lighting setup. The team understood the event flow and solved issues quickly on site.",
   },
   {
     id: 2,
@@ -366,7 +366,7 @@ export const skills = [
 export const aboutHighlights = [
   {
     title: "One trusted technical brand",
-    description: "Bixyl Lab IT Consult brings together IT, security, electrical, and event technology under a practical, client-first service model.",
+    description: "Bixyl Lab IT & Engineering Consult brings together IT, engineering, security, electrical, and event technology under a practical, client-first service model.",
     icon: Sparkles,
   },
   {
