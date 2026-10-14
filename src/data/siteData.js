@@ -34,7 +34,7 @@ export const siteProfile = {
   phone: "+233 24 891 9044",
   phoneHref: "tel:+233248919044",
   location: "Accra, Ghana",
-  locationLink: "https://maps.google.com/?q=Accra,+Ghana",
+  locationLink: "https://maps.app.goo.gl/9JG7LTSKgdDkaihM9",
   github: "https://github.com/SaviourMadeit",
   linkedin: "https://www.linkedin.com/in/saviour-dagadu",
   brand: "Bixyl Lab IT Consult",
@@ -89,6 +89,13 @@ export const services = [
     description:
       "Reliable IT support for homes, businesses, and event venues, including device setup, system troubleshooting, networking, and infrastructure maintenance.",
     highlights: ["Computer support", "Network setup", "System troubleshooting", "IT maintenance"],
+    details: [
+      "Computer, printer, and business device setup and troubleshooting",
+      "Wi-Fi, router, and small-office network setup",
+      "IT maintenance and practical technology advice",
+    ],
+    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85",
+    imageAlt: "Modern office workspace ready for reliable IT infrastructure",
     icon: Cpu,
     color: "from-sky-500 to-cyan-500",
   },
@@ -98,6 +105,13 @@ export const services = [
     description:
       "Installation and support for CCTV, access control, and security monitoring solutions that strengthen safety and protect people and assets.",
     highlights: ["CCTV installation", "Access control", "Security upgrades", "System maintenance"],
+    details: [
+      "CCTV camera planning and installation for homes and business premises",
+      "Access control and security system setup",
+      "System checks, maintenance, and troubleshooting",
+    ],
+    image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=85",
+    imageAlt: "Security camera monitoring a property",
     icon: ShieldCheck,
     color: "from-violet-500 to-fuchsia-500",
   },
@@ -107,15 +121,29 @@ export const services = [
     description:
       "Safe and practical electrical support for homes, offices, commercial sites, and live event spaces with a focus on reliability and protection.",
     highlights: ["Electrical works", "Power systems", "Safety checks", "Load planning"],
+    details: [
+      "Electrical installation and maintenance support",
+      "Power and load planning for equipment and event spaces",
+      "Fault identification and practical safety checks",
+    ],
+    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=85",
+    imageAlt: "Electrical power infrastructure at dusk",
     icon: Building2,
     color: "from-amber-500 to-orange-500",
   },
   {
     id: "lighting-effects-events",
-    title: "Stage Lighting, Fog, Haze & Laser Effects & Event Technology",
+    title: "Stage Lighting, Fog, Haze, Laser Effects & Event Technology",
     description:
       "Complete stage and event technology support for concerts, churches, gatherings, and venue productions, from lighting to control systems and effects.",
     highlights: ["Stage lights", "Fog & haze", "Laser effects", "Event control systems"],
+    details: [
+      "Stage lighting, fixture, and lighting console setup",
+      "Fog, haze, and laser effect equipment support",
+      "Event system setup, programming, and show-day technical assistance",
+    ],
+    image: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1200&q=85",
+    imageAlt: "Colorful stage lighting at a live event",
     icon: Terminal,
     color: "from-emerald-500 to-teal-500",
   },
@@ -125,6 +153,13 @@ export const services = [
     description:
       "Fast fault diagnosis, preventive maintenance, and repair support for lighting systems, electrical equipment, and technical installations.",
     highlights: ["Fault diagnosis", "On-site support", "Preventive care", "Equipment repair"],
+    details: [
+      "Fault finding and repair coordination for technical equipment",
+      "Preventive inspection and maintenance planning",
+      "On-site technical support for venues, businesses, and events",
+    ],
+    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=85",
+    imageAlt: "Technician inspecting and maintaining equipment",
     icon: Rocket,
     color: "from-pink-500 to-rose-500",
   },

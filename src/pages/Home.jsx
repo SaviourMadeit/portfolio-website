@@ -1,313 +1,244 @@
-﻿import {
-  ArrowRight,
-  BadgeCheck,
-  BriefcaseBusiness,
-  Download,
-  GraduationCap,
-  Mail,
-  ShieldCheck,
-  Wrench,
-  Cpu,
-  Layers,
-  FileText,
-  Github,
-  Linkedin,
-  MessageCircle,
+import { createElement } from "react";
+import {
+	ArrowRight,
+	Check,
+	CircleHelp,
+	Clock3,
+	ShieldCheck,
+	Wrench,
 } from "lucide-react";
 import { Link, useOutletContext } from "react-router-dom";
-import {
-  certifications,
-  educationBackground,
-  portfolioProjects,
-  professionalRoles,
-  services,
-  siteProfile,
-} from "../data";
-
-const cvUrl = "/docs/Saviour_Dagadu_CV.pdf";
+import { services, siteProfile } from "../data";
 
 const Home = () => {
-  const { isDark } = useOutletContext();
-  const panel = isDark ? "border-slate-700 bg-slate-900/60" : "border-slate-200 bg-white/80";
-  const softPanel = isDark ? "bg-slate-900/50 border-slate-700" : "bg-slate-50 border-slate-200";
-  const brandText = isDark ? "text-white" : "text-slate-900";
-  const muted = isDark ? "text-slate-300" : "text-slate-600";
+	const { isDark } = useOutletContext();
+	const ink = isDark ? "text-white" : "text-slate-900";
+	const muted = isDark ? "text-slate-300" : "text-slate-600";
+	const panel = isDark
+		? "border-slate-700 bg-slate-900/70"
+		: "border-slate-200 bg-white";
 
-  return (
-    <div className="pt-24 pb-20">
-      <section className="px-4">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
-            <div>
-              <span className="inline-flex items-center rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-white shadow-lg shadow-blue-500/20">
-                {siteProfile.name}
-              </span>
-              <h1 className={`mt-6 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl ${brandText}`}>
-                Engineer. Builder. Mentor. Problem-solver.
-              </h1>
-              <p className={`mt-6 max-w-2xl text-lg leading-relaxed ${muted}`}>
-                I am a technical professional focused on embedded systems, firmware, IT infrastructure, security solutions, electrical support, and live event technology. My work is built around practical problem solving, service reliability, and helping people, businesses, venues, and teams get the systems they need to perform with confidence.
-              </p>
+	return (
+		<div className="pb-20">
+			<section className="relative isolate overflow-hidden bg-slate-950 px-4 pb-16 pt-32 text-white lg:pb-24 lg:pt-40">
+				<div
+					className="absolute inset-0 -z-20 bg-cover bg-center opacity-35"
+					style={{
+						backgroundImage:
+							"url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=2000&q=85')",
+					}}
+				/>
+				<div className="absolute inset-0 -z-10 bg-gradient-to-r from-slate-950 via-slate-950/90 to-blue-950/65" />
+				<div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+					<div>
+						{/* <p className="inline-flex rounded-full border border-cyan-300/30 bg-cyan-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-200">
+							{siteProfile.name} · Accra, Ghana
+						</p> */}
+						<h1 className="mt-6 max-w-3xl text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+							Technology that works. Support you can count on.
+						</h1>
+						<p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-200 sm:text-xl">
+							From dependable IT and security systems to electrical solutions,
+							live-event technology, and equipment repair, Bixyl Lab helps
+							people and businesses get the right technical support.
+						</p>
+						<div className="mt-8 flex flex-wrap gap-3">
+							<Link
+								to="/services"
+								className="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300"
+							>
+								Explore our services
+								<ArrowRight className="h-4 w-4" />
+							</Link>
+							<Link
+								to="/contact"
+								className="inline-flex items-center gap-2 rounded-full border border-white/40 px-6 py-3 font-semibold text-white transition hover:border-cyan-300 hover:text-cyan-200"
+							>
+								Request a service
+							</Link>
+						</div>
+						<div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-slate-200">
+							<span className="inline-flex items-center gap-2">
+								<Check className="h-4 w-4 text-cyan-300" />
+								Practical, client-focused solutions
+							</span>
+							<span className="inline-flex items-center gap-2">
+								<Check className="h-4 w-4 text-cyan-300" />
+								Support for homes, businesses, and events
+							</span>
+						</div>
+					</div>
 
-              <div className="mt-8 flex flex-wrap gap-3">
-                <a
-                  href={cvUrl}
-                  download
-                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-6 py-3 font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:opacity-95"
-                >
-                  <Download className="h-4 w-4" />
-                  Download CV
-                </a>
-                <Link
-                  to="/services"
-                  className={`inline-flex items-center gap-2 rounded-full border px-6 py-3 font-semibold ${isDark ? "border-slate-600 text-white hover:border-blue-400" : "border-slate-300 text-slate-900 hover:border-blue-500"}`}
-                >
-                  Explore services
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
+					<div className="grid gap-4 sm:grid-cols-2">
+						{services.slice(0, 4).map(({ id, title, icon, color }, index) => (
+							<Link
+								key={id}
+								to={`/services#${id}`}
+								className={`group rounded-3xl border border-white/15 bg-slate-900/70 p-5 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-cyan-300/60 ${
+									index === 0 ? "sm:translate-y-6" : ""
+								}`}
+							>
+								<span
+									className={`inline-flex rounded-2xl bg-gradient-to-r ${color} p-3 text-white`}
+								>
+									{createElement(icon, { className: "h-6 w-6" })}
+								</span>
+								<h2 className="mt-5 text-lg font-semibold text-white">{title}</h2>
+								<span className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-cyan-300">
+									See what we do
+									<ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+								</span>
+							</Link>
+						))}
+					</div>
+				</div>
+			</section>
 
-              <div className={`mt-10 flex flex-wrap items-center gap-4 rounded-2xl border p-4 ${panel}`}>
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 text-lg font-bold text-white shadow-lg shadow-blue-500/20">
-                  SD
-                </div>
-                <div>
-                  <p className={`font-semibold ${brandText}`}>Saviour Dagadu</p>
-                  <p className={`text-sm ${muted}`}>
-                    Technical Professional • IT Support • Embedded Systems • Event Technology
-                  </p>
-                </div>
-              </div>
-            </div>
+			<section className="px-4 py-20">
+				<div className="mx-auto max-w-7xl">
+					<div className="mx-auto mb-12 max-w-3xl text-center">
+						<p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-600 dark:text-cyan-400">
+							What we do
+						</p>
+						<h2 className={`mt-3 text-3xl font-bold sm:text-4xl ${ink}`}>
+							One trusted team for your technical needs
+						</h2>
+						<p className={`mt-4 text-lg leading-relaxed ${muted}`}>
+							Choose the service you need to see how we can help. Each service
+							page includes a fuller breakdown and a direct way to enquire.
+						</p>
+					</div>
 
-            <div className={`rounded-3xl border p-6 ${panel}`}>
-              <h2 className={`mb-5 text-2xl font-bold ${brandText}`}>Quick profile</h2>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <BriefcaseBusiness className="mt-1 h-5 w-5 text-blue-500" />
-                  <div>
-                    <p className={`font-semibold ${brandText}`}>Profession</p>
-                    <p className={muted}>Technical professional delivering support and solutions across IT, security, electrical, and event systems.</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <GraduationCap className="mt-1 h-5 w-5 text-blue-500" />
-                  <div>
-                    <p className={`font-semibold ${brandText}`}>Education & learning</p>
-                    <p className={muted}>Practical technical education, systems training, and continuous professional development in electronics and computing.</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ShieldCheck className="mt-1 h-5 w-5 text-blue-500" />
-                  <div>
-                    <p className={`font-semibold ${brandText}`}>Employer value</p>
-                    <p className={muted}>Reliable, safety-focused, communication-driven, and solution-oriented in demanding real-world environments.</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+					<div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+						{services.map(({ id, title, description, highlights, image, imageAlt, icon }) => (
+							<article
+								key={id}
+								className={`group overflow-hidden rounded-3xl border shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl ${panel}`}
+							>
+								<Link to={`/services#${id}`} className="block">
+									<div className="relative h-56 overflow-hidden bg-slate-200">
+										<img
+											src={image}
+											alt={imageAlt}
+											loading="lazy"
+											className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+										/>
+										<div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent" />
+										<div className="absolute bottom-4 left-4 flex items-center gap-3 text-white">
+											<span className="rounded-xl bg-cyan-500 p-2.5">
+												{createElement(icon, { className: "h-5 w-5" })}
+											</span>
+											<h3 className="text-xl font-bold">{title}</h3>
+										</div>
+									</div>
+									<div className="p-6">
+										<p className={`leading-relaxed ${muted}`}>{description}</p>
+										<div className="mt-5 flex flex-wrap gap-2">
+											{highlights.slice(0, 3).map((highlight) => (
+												<span
+													key={highlight}
+													className="rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-700 dark:text-cyan-300"
+												>
+													{highlight}
+												</span>
+											))}
+										</div>
+										<span className="mt-6 inline-flex items-center gap-2 font-semibold text-blue-600 dark:text-cyan-300">
+											Explore this service
+											<ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+										</span>
+									</div>
+								</Link>
+							</article>
+						))}
+					</div>
 
-      <section className="px-4 py-16">
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-10 text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-500">Professional profile</p>
-            <h2 className={`mt-3 text-3xl font-bold sm:text-4xl ${brandText}`}>
-              What I bring to every project and client relationship
-            </h2>
-          </div>
+					<div className="mt-10 text-center">
+						<Link
+							to="/services"
+							className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-6 py-3 font-semibold text-white transition hover:bg-blue-800 dark:bg-cyan-500 dark:text-slate-950 dark:hover:bg-cyan-400"
+						>
+							View all service details
+							<ArrowRight className="h-4 w-4" />
+						</Link>
+					</div>
+				</div>
+			</section>
 
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {[
-              {
-                title: "Education",
-                text: "Learning grounded in technical practice, electronics training, systems support, and applied engineering experience.",
-                icon: GraduationCap,
-              },
-              {
-                title: "Certifications",
-                text: "Continuous study in embedded systems, IoT, and technical skills that support reliable project execution.",
-                icon: BadgeCheck,
-              },
-              {
-                title: "Case studies",
-                text: "Real product and system work across agriculture, automation, embedded systems, and robotics learning tools.",
-                icon: BriefcaseBusiness,
-              },
-              {
-                title: "Current work",
-                text: "Focused on farm systems, robotics education kits, and practical technical support for business and event applications.",
-                icon: Wrench,
-              },
-            ].map(({ title, text, icon: Icon }) => (
-              <div key={title} className={`rounded-3xl border p-6 ${panel}`}>
-                <div className="mb-4 inline-flex rounded-2xl bg-blue-500/10 p-3 text-blue-500">
-                  <Icon className="h-6 w-6" />
-                </div>
-                <h3 className={`text-xl font-semibold ${brandText}`}>{title}</h3>
-                <p className={`mt-3 leading-relaxed ${muted}`}>{text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+			<section className={`px-4 py-16 ${isDark ? "bg-slate-900/50" : "bg-slate-100"}`}>
+				<div className="mx-auto max-w-7xl">
+					<div className="mx-auto mb-10 max-w-3xl text-center">
+						<p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-600 dark:text-cyan-400">
+							Why Bixyl Lab
+						</p>
+						<h2 className={`mt-3 text-3xl font-bold sm:text-4xl ${ink}`}>
+							Good service means more than installing equipment
+						</h2>
+					</div>
+					<div className="grid gap-5 md:grid-cols-3">
+						{[
+							{
+								title: "Understand your needs",
+								text: "We listen first, learn how your space or event works, and recommend a practical solution for your goals.",
+								icon: CircleHelp,
+							},
+							{
+								title: "Reliable technical work",
+								text: "We focus on careful setup, clear communication, and dependable operation—not just a quick fix.",
+								icon: ShieldCheck,
+							},
+							{
+								title: "Support beyond setup",
+								text: "From troubleshooting to maintenance, we help you keep your systems useful and ready for what comes next.",
+								icon: Wrench,
+							},
+						].map(({ title, text, icon }) => (
+							<div key={title} className={`rounded-3xl border p-6 ${panel}`}>
+								<span className="inline-flex rounded-2xl bg-cyan-500/10 p-3 text-cyan-600 dark:text-cyan-300">
+									{createElement(icon, { className: "h-6 w-6" })}
+								</span>
+								<h3 className={`mt-4 text-xl font-semibold ${ink}`}>{title}</h3>
+								<p className={`mt-2 leading-relaxed ${muted}`}>{text}</p>
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
 
-      <section className={`px-4 py-16 ${softPanel}`}>
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-8 text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-500">Expertise</p>
-            <h2 className={`mt-3 text-3xl font-bold ${brandText}`}>Core professional roles</h2>
-          </div>
-          <div className="flex flex-wrap justify-center gap-3">
-            {professionalRoles.map((role) => (
-              <span
-                key={role}
-                className="rounded-full border border-blue-500/30 bg-white/70 px-4 py-2 text-sm font-medium text-blue-700 shadow-sm dark:bg-slate-800/80 dark:text-blue-300"
-              >
-                {role}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-4 py-16">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid gap-8 lg:grid-cols-2">
-            <div className={`rounded-3xl border p-8 ${panel}`}>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-500">Education</p>
-              <h2 className={`mt-3 text-3xl font-bold ${brandText}`}>Learning that supports technical confidence</h2>
-              <ul className="mt-6 space-y-4">
-                {educationBackground.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-blue-500/10 text-xs font-bold text-blue-500">•</span>
-                    <span className={muted}>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className={`rounded-3xl border p-8 ${panel}`}>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-500">Certifications</p>
-              <h2 className={`mt-3 text-3xl font-bold ${brandText}`}>Recognised technical learning</h2>
-              <div className="mt-6 space-y-4">
-                {certifications.slice(0, 4).map((cert) => (
-                  <div key={cert.title} className="rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-800/60">
-                    <div className="flex items-start justify-between gap-3">
-                      <div>
-                        <p className="font-semibold text-blue-600 dark:text-blue-300">{cert.title}</p>
-                        <p className={`text-sm ${muted}`}>{cert.issuer} • {cert.date}</p>
-                      </div>
-                      <a href={cert.credentialUrl} target="_blank" rel="noreferrer" className="text-sm font-medium text-blue-600 dark:text-blue-300">
-                        View
-                      </a>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="px-4 py-16">
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-10 text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-500">Current focus</p>
-            <h2 className={`mt-3 text-3xl font-bold sm:text-4xl ${brandText}`}>Active projects and real-world work</h2>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2">
-            {portfolioProjects.slice(0, 2).map((project) => (
-              <div key={project.id} className={`rounded-3xl border p-6 ${panel}`}>
-                <div className="mb-4 inline-flex rounded-2xl bg-blue-500/10 p-3 text-blue-500">
-                  {project.title === "Farm King" ? <Cpu className="h-6 w-6" /> : <Layers className="h-6 w-6" />}
-                </div>
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-500">{project.category}</p>
-                <h3 className={`mt-3 text-2xl font-bold ${brandText}`}>{project.title}</h3>
-                <p className={`mt-3 leading-relaxed ${muted}`}>{project.summary}</p>
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {project.tech.map((item) => (
-                    <span key={item} className="rounded-full bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-600 dark:text-blue-300">
-                      {item}
-                    </span>
-                  ))}
-                </div>
-                <div className="mt-6 flex gap-3">
-                  {project.links?.website && (
-                    <a href={project.links.website} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white">
-                      View project
-                    </a>
-                  )}
-                  {project.links?.github && (
-                    <a href={project.links.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 dark:border-slate-600 dark:text-slate-200">
-                      GitHub
-                    </a>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-4 py-16">
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-10 text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-500">Service categories</p>
-            <h2 className={`mt-3 text-3xl font-bold sm:text-4xl ${brandText}`}>Full business profile in one service portfolio</h2>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
-            {services.map(({ title, description, icon: Icon }) => (
-              <div key={title} className={`rounded-3xl border p-5 ${panel}`}>
-                <div className="mb-4 inline-flex rounded-2xl bg-blue-500/10 p-3 text-blue-500">
-                  <Icon className="h-5 w-5" />
-                </div>
-                <h3 className={`text-lg font-semibold ${brandText}`}>{title}</h3>
-                <p className={`mt-2 text-sm leading-relaxed ${muted}`}>{description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-4 py-16">
-        <div className="mx-auto max-w-5xl rounded-3xl border border-blue-500/20 bg-gradient-to-r from-blue-600 to-cyan-500 p-8 text-white shadow-2xl shadow-blue-500/10">
-          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-100">Let’s talk</p>
-              <h2 className="mt-3 text-3xl font-bold">Need support, repair, security, or event technology?</h2>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              <a href={cvUrl} download className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 font-semibold text-blue-700">
-                <FileText className="h-4 w-4" />
-                Download CV
-              </a>
-              <a href={`mailto:${siteProfile.email}`} className="inline-flex items-center gap-2 rounded-full border border-white/70 px-5 py-3 font-semibold text-white">
-                <Mail className="h-4 w-4" />
-                Contact me
-              </a>
-            </div>
-          </div>
-
-          <div className="mt-6 flex flex-wrap gap-4 text-sm text-blue-50">
-            <a href={siteProfile.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/30 px-3 py-2">
-              <Github className="h-4 w-4" /> GitHub
-            </a>
-            <a href={siteProfile.linkedin} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/30 px-3 py-2">
-              <Linkedin className="h-4 w-4" /> LinkedIn
-            </a>
-            <a href={`https://wa.me/233248919044`} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/30 px-3 py-2">
-              <MessageCircle className="h-4 w-4" /> WhatsApp
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+			<section className="px-4 py-20">
+				<div className="mx-auto flex max-w-6xl flex-col gap-6 rounded-3xl bg-gradient-to-r from-blue-950 via-blue-900 to-cyan-800 p-8 text-white shadow-2xl shadow-blue-950/20 md:flex-row md:items-center md:justify-between md:p-12">
+					<div>
+						<p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-200">
+							<Clock3 className="h-4 w-4" />
+							Let’s get started
+						</p>
+						<h2 className="mt-3 max-w-2xl text-3xl font-bold">
+							Tell us what you need. We’ll help you find the right solution.
+						</h2>
+						<p className="mt-3 text-blue-100">
+							Contact Bixyl Lab IT Consult for a service enquiry or project
+							conversation.
+						</p>
+					</div>
+					<div className="flex shrink-0 flex-wrap gap-3">
+						<Link
+							to="/contact"
+							className="inline-flex items-center gap-2 rounded-full bg-cyan-300 px-5 py-3 font-semibold text-slate-950 transition hover:bg-cyan-200"
+						>
+							Contact us
+							<ArrowRight className="h-4 w-4" />
+						</Link>
+						<a
+							href={siteProfile.phoneHref}
+							className="inline-flex items-center rounded-full border border-white/40 px-5 py-3 font-semibold text-white transition hover:border-cyan-200 hover:text-cyan-200"
+						>
+							Call {siteProfile.phone}
+						</a>
+					</div>
+				</div>
+			</section>
+		</div>
+	);
 };
 
 export default Home;
