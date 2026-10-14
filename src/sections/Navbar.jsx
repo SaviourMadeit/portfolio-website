@@ -37,14 +37,14 @@ const Brand = ({ isDark, onClick }) => {
 		>
 			{logoFailed ? (
 				// Fallback so the nav never shows a broken image
-				<span className="w-10 h-10 rounded-xl bg-blue-500 flex items-center justify-center">
+				<span className="h-14 w-20 shrink-0 rounded-xl bg-blue-500 flex items-center justify-center">
 					<Cpu className="w-6 h-6 text-white" />
 				</span>
 			) : (
 				<img
 					src={LOGO}
 					alt={`${siteProfile.name} logo`}
-					className="h-12 w-12 shrink-0 rounded-xl object-contain"
+					className="h-14 w-20 shrink-0 object-contain"
 					onError={() => {
 						console.warn(
 							`[Navbar] Logo failed to load from "${LOGO}". Open that URL directly in the browser to check it.`,

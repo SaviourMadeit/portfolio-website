@@ -65,14 +65,14 @@ const Footer = ({ isDark }) => {
 							className={`inline-flex items-center gap-3 rounded-lg ${focusRing}`}
 						>
 							{logoFailed ? (
-								<span className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center shadow-lg shadow-blue-500/20">
+								<span className="h-14 w-20 shrink-0 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center shadow-lg shadow-blue-500/20">
 									<Cpu className="w-6 h-6 text-white" />
 								</span>
 							) : (
 								<img
 									src={logoSrc}
 									alt={`${siteProfile.name} logo`}
-									className="h-12 w-12 shrink-0 rounded-xl object-contain"
+									className="h-14 w-20 shrink-0 object-contain"
 									onError={() => setLogoFailed(true)}
 								/>
 							)}
