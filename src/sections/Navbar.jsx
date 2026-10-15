@@ -1,17 +1,13 @@
 import { useEffect, useState } from "react";
 import {
-	ArrowUpRight,
 	Cpu,
 	Menu as MenuIcon,
-	MessageCircle,
 	X,
 } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
-import ThemeToggle from "../components/ui/ThemeToggle";
 import { NAV_LINKS, siteProfile } from "../data";
 
 const LOGO = "/images/bixyl/Logo.png";
-const WHATSAPP_NUMBER = "233248919044";
 const CTA = { label: "Get a quote", to: "/contact" };
 
 const NAV_FONT = {
@@ -71,8 +67,6 @@ const Brand = ({ isDark, onClick }) => {
 const Navbar = ({
 	scrolled,
 	isDark,
-	theme,
-	handleThemeChange,
 	mobileMenuOpen,
 	setMobileMenuOpen,
 }) => {
@@ -109,13 +103,7 @@ const Navbar = ({
 					: "text-slate-700 hover:bg-slate-100"
 		}`;
 
-	const ctaClasses = `inline-flex items-center gap-1.5 rounded-full bg-blue-500 hover:bg-blue-400 text-white text-[15px] font-semibold px-5 py-2.5 transition-colors ${focusRing}`;
-
-	const whatsappClasses = `inline-flex items-center gap-2 rounded-full border text-[15px] font-semibold px-4 py-2.5 transition-colors ${focusRing} ${
-		isDark
-			? "border-slate-600 text-slate-200 hover:border-green-400"
-			: "border-slate-300 text-slate-700 hover:border-green-500"
-	}`;
+	const ctaClasses = `inline-flex items-center rounded-full bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold px-4 py-2 transition-colors ${focusRing}`;
 
 	return (
 		<>
@@ -160,33 +148,13 @@ const Navbar = ({
 						</div>
 
 						<div className="hidden lg:flex items-center gap-3">
-							<ThemeToggle
-								theme={theme}
-								handleThemeChange={handleThemeChange}
-							/>
-							{WHATSAPP_NUMBER && (
-								<a
-									href={`https://wa.me/${WHATSAPP_NUMBER}`}
-									target="_blank"
-									rel="noreferrer"
-									className={`${whatsappClasses} hidden xl:inline-flex`}
-								>
-									<MessageCircle className="w-4 h-4" />
-									WhatsApp
-								</a>
-							)}
 							<Link to={CTA.to} className={ctaClasses}>
 								{CTA.label}
-								<ArrowUpRight className="w-4 h-4" />
 							</Link>
 						</div>
 
 						{/* Mobile / tablet controls */}
 						<div className="lg:hidden flex items-center gap-2">
-							<ThemeToggle
-								theme={theme}
-								handleThemeChange={handleThemeChange}
-							/>
 							<button
 								type="button"
 								aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
@@ -239,19 +207,7 @@ const Navbar = ({
 									className={`${ctaClasses} justify-center w-full`}
 								>
 									{CTA.label}
-									<ArrowUpRight className="w-4 h-4" />
 								</Link>
-								{WHATSAPP_NUMBER && (
-									<a
-										href={`https://wa.me/${WHATSAPP_NUMBER}`}
-										target="_blank"
-										rel="noreferrer"
-										className={`${whatsappClasses} justify-center w-full`}
-									>
-										<MessageCircle className="w-4 h-4" />
-										Chat on WhatsApp
-									</a>
-								)}
 							</div>
 						</div>
 					</div>

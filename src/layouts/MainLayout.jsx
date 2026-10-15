@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Background from "../components/ui/Background";
+import ThemeToggle from "../components/ui/ThemeToggle";
 import Navbar from "../sections/Navbar";
 import Footer from "../sections/Footer";
 
@@ -89,8 +90,6 @@ const MainLayout = () => {
 			<Navbar
 				scrolled={scrolled}
 				isDark={isDark}
-				theme={theme}
-				handleThemeChange={handleThemeChange}
 				mobileMenuOpen={mobileMenuOpen}
 				setMobileMenuOpen={setMobileMenuOpen}
 			/>
@@ -100,6 +99,14 @@ const MainLayout = () => {
 			</main>
 
 			<Footer isDark={isDark} />
+
+			<div className="fixed bottom-4 right-4 z-50">
+				<ThemeToggle
+					theme={theme}
+					handleThemeChange={handleThemeChange}
+					isDark={isDark}
+				/>
+			</div>
 
 			<style>{`
 				@keyframes spin-slow {
