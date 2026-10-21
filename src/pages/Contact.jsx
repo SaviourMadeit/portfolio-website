@@ -1,4 +1,5 @@
 import { createElement, useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import {
 	ArrowRight,
 	Clock3,
@@ -7,7 +8,7 @@ import {
 	MessageCircle,
 } from "lucide-react";
 import { Link, useOutletContext, useSearchParams } from "react-router-dom";
-import { contactDetails, services, siteProfile } from "../data";
+import { contactDetails, services } from "../data";
 
 const WHATSAPP_NUMBER = "233248919044";
 const fieldClasses =
@@ -15,6 +16,7 @@ const fieldClasses =
 
 const Contact = () => {
 	const { isDark } = useOutletContext();
+	const [state, handleSubmit] = useForm("mvkzewkp");
 	const [searchParams] = useSearchParams();
 	const [service, setService] = useState(() => {
 		const requestedService = searchParams.get("service");
@@ -28,8 +30,6 @@ const Contact = () => {
 		phone: "",
 		message: "",
 	});
-	const [handoffStarted, setHandoffStarted] = useState(false);
-
 	const ink = isDark ? "text-white" : "text-slate-900";
 	const muted = isDark ? "text-slate-300" : "text-slate-600";
 	const panel = isDark
@@ -42,28 +42,6 @@ const Contact = () => {
 	const handleFormChange = (event) => {
 		const { name, value } = event.target;
 		setFormData((previous) => ({ ...previous, [name]: value }));
-		setHandoffStarted(false);
-	};
-
-	const handleFormSubmit = (event) => {
-		event.preventDefault();
-		const subject = service
-			? `Service enquiry: ${service}`
-			: "Service enquiry";
-		const body = [
-			`Name: ${formData.name}`,
-			`Email: ${formData.email}`,
-			formData.phone ? `Phone: ${formData.phone}` : null,
-			service ? `Service needed: ${service}` : null,
-			"",
-			formData.message,
-		]
-			.filter((line) => line !== null)
-			.join("\n");
-		const mailtoLink = `mailto:${siteProfile.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-		setHandoffStarted(true);
-		window.location.href = mailtoLink;
 	};
 
 	return (
@@ -157,7 +135,21 @@ const Contact = () => {
 							</div>
 						</div>
 
-						<form onSubmit={handleFormSubmit} className="space-y-5">
+						{state.succeeded ? (
+							<p
+								role="status"
+								className="rounded-2xl bg-emerald-500/10 p-5 leading-relaxed text-emerald-700 dark:text-emerald-300"
+							>
+								Thank you. Your enquiry has been sent to Bixyl Lab, and we’ll
+								get back to you as soon as we can.
+							</p>
+						) : (
+						<form onSubmit={handleSubmit} className="space-y-5">
+							<input
+								type="hidden"
+								name="_subject"
+								value={`Service enquiry: ${service || "Website enquiry"}`}
+							/>
 							<div className="grid gap-5 sm:grid-cols-2">
 								<label className={`block text-sm font-medium ${ink}`}>
 									Your name *
@@ -170,6 +162,11 @@ const Contact = () => {
 										placeholder="Full name"
 										className={`${fieldClasses} ${fieldTheme}`}
 										required
+									/>
+									<ValidationError
+										field="name"
+										errors={state.errors}
+										className="mt-1 text-sm text-red-600 dark:text-red-400"
 									/>
 								</label>
 
@@ -184,6 +181,11 @@ const Contact = () => {
 										placeholder="you@example.com"
 										className={`${fieldClasses} ${fieldTheme}`}
 										required
+									/>
+									<ValidationError
+										field="email"
+										errors={state.errors}
+										className="mt-1 text-sm text-red-600 dark:text-red-400"
 									/>
 								</label>
 							</div>
@@ -209,7 +211,6 @@ const Contact = () => {
 										value={service}
 										onChange={(event) => {
 											setService(event.target.value);
-											setHandoffStarted(false);
 										}}
 										className={`${fieldClasses} ${fieldTheme}`}
 										required
@@ -224,6 +225,11 @@ const Contact = () => {
 										))}
 										<option value="Other / Not sure">Other / Not sure</option>
 									</select>
+									<ValidationError
+										field="service"
+										errors={state.errors}
+										className="mt-1 text-sm text-red-600 dark:text-red-400"
+									/>
 								</label>
 							</div>
 
@@ -238,27 +244,39 @@ const Contact = () => {
 									className={`${fieldClasses} resize-y`}
 									required
 								/>
+								<ValidationError
+									field="message"
+									errors={state.errors}
+									className="mt-1 text-sm text-red-600 dark:text-red-400"
+								/>
 							</label>
+
+							{state.errors && (
+								<p
+									role="alert"
+									className="text-sm text-red-600 dark:text-red-400"
+								>
+									We couldn’t send your enquiry. Please check the fields and
+									try again.
+								</p>
+							)}
 
 							<div className="flex flex-col gap-3 border-t border-slate-200 pt-5 dark:border-slate-700 sm:flex-row sm:items-center sm:justify-between">
 								<button
 									type="submit"
+									disabled={state.submitting}
 									className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-blue-700 to-cyan-600 px-6 py-3 font-semibold text-white transition hover:opacity-90"
 								>
-									Prepare email enquiry
+									{state.submitting ? "Sending enquiry…" : "Send enquiry"}
 									<ArrowRight className="h-4 w-4" />
 								</button>
-								{handoffStarted && (
-									<p role="status" className="text-sm text-emerald-600 dark:text-emerald-400">
-										Your email app should open with your enquiry ready to send.
-									</p>
-								)}
 							</div>
 							<p className={`text-xs leading-relaxed ${muted}`}>
-								This form prepares a message in your email application; it
-								doesn’t send or store your enquiry on this website.
+								Your enquiry is submitted directly to Bixyl Lab through
+								Formspree; no email app is needed.
 							</p>
 						</form>
+						)}
 					</div>
 				</div>
 			</section>
