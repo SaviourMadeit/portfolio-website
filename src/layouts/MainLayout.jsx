@@ -7,7 +7,6 @@ import Footer from "../sections/Footer";
 
 const MainLayout = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-	const [scrolled, setScrolled] = useState(false);
 	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 	const [theme, setTheme] = useState("auto");
 	const [isDark, setIsDark] = useState(false);
@@ -21,7 +20,6 @@ const MainLayout = () => {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			setScrolled(window.scrollY > 50);
 			const totalHeight =
 				document.documentElement.scrollHeight -
 				document.documentElement.clientHeight;
@@ -88,8 +86,6 @@ const MainLayout = () => {
 			<Background isDark={isDark} mousePosition={mousePosition} />
 
 			<Navbar
-				scrolled={scrolled}
-				isDark={isDark}
 				mobileMenuOpen={mobileMenuOpen}
 				setMobileMenuOpen={setMobileMenuOpen}
 			/>

@@ -272,8 +272,7 @@ const Contact = () => {
 								</button>
 							</div>
 							<p className={`text-xs leading-relaxed ${muted}`}>
-								Your enquiry is submitted directly to Bixyl Lab through
-								Formspree; no email app is needed.
+								Your enquiry is submitted directly to Bixyl Lab IT & Engineering Consult.
 							</p>
 						</form>
 						)}

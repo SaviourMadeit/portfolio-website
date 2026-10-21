@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./HeroSlider.css";
-import storefrontImage from "../assets/hero/bixyl-storefront.webp";
+import storefrontImage from "../assets/hero/bixyl-storefront-optimized.webp";
 import workshopImage from "../assets/hero/hero-workshop.webp";
 import itInfrastructureImage from "../assets/hero/it-support1.webp";
 import securityImage from "../assets/hero/security.webp";

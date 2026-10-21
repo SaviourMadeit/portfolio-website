@@ -21,7 +21,7 @@ const focusRing =
 /* ------------------------------------------------------------------ */
 /* Brand: logo followed by the wordmark                                */
 /* ------------------------------------------------------------------ */
-const Brand = ({ isDark, onClick }) => {
+const Brand = ({ onClick }) => {
 	const [logoFailed, setLogoFailed] = useState(false);
 
 	return (
@@ -54,7 +54,7 @@ const Brand = ({ isDark, onClick }) => {
 
 			<span className="flex flex-col leading-none">
 				<span
-					className={`text-base font-extrabold tracking-tight sm:text-lg ${isDark ? "text-white" : "text-slate-900"}`}
+					className="text-base font-extrabold tracking-tight text-slate-900 sm:text-lg"
 				>
 					{siteProfile.name}
 				</span>
@@ -66,12 +66,7 @@ const Brand = ({ isDark, onClick }) => {
 	);
 };
 
-const Navbar = ({
-	scrolled,
-	isDark,
-	mobileMenuOpen,
-	setMobileMenuOpen,
-}) => {
+const Navbar = ({ mobileMenuOpen, setMobileMenuOpen }) => {
 	// Close the mobile menu with Escape
 	useEffect(() => {
 		if (!mobileMenuOpen) return;
@@ -80,29 +75,18 @@ const Navbar = ({
 		return () => window.removeEventListener("keydown", onKey);
 	}, [mobileMenuOpen, setMobileMenuOpen]);
 
-	const solid = scrolled || mobileMenuOpen;
-	const ink = isDark ? "text-white" : "text-slate-900";
-
 	const linkClasses = ({ isActive }) =>
 		`capitalize px-3 xl:px-4 py-2 text-[15px] font-medium border-b-2 transition-colors ${focusRing} ${
 			isActive
-				? `border-blue-500 ${ink}`
-				: `border-transparent ${
-						isDark
-							? "text-slate-300 hover:text-white"
-							: "text-slate-600 hover:text-slate-900"
-					}`
+				? "border-blue-500 text-slate-900"
+				: "border-transparent text-slate-600 hover:text-slate-900"
 		}`;
 
 	const mobileLinkClasses = ({ isActive }) =>
 		`block w-full capitalize py-3 px-4 rounded-lg font-medium transition-colors ${focusRing} ${
 			isActive
-				? isDark
-					? "bg-blue-500/15 text-blue-300"
-					: "bg-blue-50 text-blue-700"
-				: isDark
-					? "text-slate-300 hover:bg-slate-800/60"
-					: "text-slate-700 hover:bg-slate-100"
+				? "bg-blue-50 text-blue-700"
+				: "text-slate-700 hover:bg-slate-100"
 		}`;
 
 	const ctaClasses = `inline-flex items-center rounded-full bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold px-4 py-2 transition-colors ${focusRing}`;
@@ -120,20 +104,11 @@ const Navbar = ({
 			<nav
 				aria-label="Main"
 				style={NAV_FONT}
-				className={`fixed w-full z-50 transition-colors duration-300 ${
-					solid
-						? isDark
-							? "bg-slate-950/90 backdrop-blur-lg border-b border-slate-800"
-							: "bg-white/90 backdrop-blur-lg border-b border-slate-200"
-						: "bg-transparent border-b border-transparent"
-				}`}
+				className="fixed z-50 w-full border-b border-slate-200 bg-white shadow-sm"
 			>
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="flex justify-between items-center h-20">
-						<Brand
-							isDark={isDark}
-							onClick={() => setMobileMenuOpen(false)}
-						/>
+						<Brand onClick={() => setMobileMenuOpen(false)} />
 
 						{/* Desktop */}
 						<div className="hidden lg:flex items-center gap-1">
@@ -162,11 +137,7 @@ const Navbar = ({
 								aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
 								aria-expanded={mobileMenuOpen}
 								aria-controls="mobile-menu"
-								className={`p-2 rounded-lg transition-colors ${focusRing} ${
-									isDark
-										? "text-slate-300 hover:text-blue-400"
-										: "text-slate-600 hover:text-blue-600"
-								}`}
+								className={`p-2 rounded-lg text-slate-600 transition-colors hover:text-blue-600 ${focusRing}`}
 								onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
 							>
 								{mobileMenuOpen ? (
@@ -183,11 +154,7 @@ const Navbar = ({
 				{mobileMenuOpen && (
 					<div
 						id="mobile-menu"
-						className={`lg:hidden border-t ${
-							isDark
-								? "bg-slate-950 border-slate-800"
-								: "bg-white border-slate-200"
-						}`}
+						className="border-t border-slate-200 bg-white lg:hidden"
 					>
 						<div className="px-4 py-5 space-y-1">
 							{NAV_LINKS.map((item) => (

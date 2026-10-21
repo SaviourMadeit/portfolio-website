@@ -25,7 +25,7 @@ const Home = () => {
 				<HeroSlider />
 				<div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center">
 					<h1 className="max-w-4xl text-balance text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-							Reliable Technology Practical Solutions
+						Reliable technology. Practical solutions.
 					</h1>
 					<p className="mt-6 max-w-[720px] text-lg leading-relaxed text-slate-200 sm:text-xl">
 						Bixyl Lab IT & Engineering Consult combines practical technical skills in embedded systems, 

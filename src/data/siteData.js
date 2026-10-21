@@ -30,7 +30,7 @@ export const siteProfile = {
   tagline: "Reliable Technology. Practical Solutions.",
   intro:
     "Bixyl Lab IT & Engineering Consult delivers practical technology and engineering services, including IT infrastructure, embedded systems, CCTV and security systems, electrical installations, event lighting, stage equipment, and technical maintenance for homes, businesses, venues, and live productions.",
-  email: "Senamdagadusaviour@gmail.com",
+  email: "bixyllabitconsult@gmail.com",
   phone: "+233 24 891 9044",
   phoneHref: "tel:+233248919044",
   location: "Accra, Ghana",
