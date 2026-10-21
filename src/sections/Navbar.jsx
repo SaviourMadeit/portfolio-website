@@ -7,7 +7,7 @@ import {
 import { Link, NavLink } from "react-router-dom";
 import { NAV_LINKS, siteProfile } from "../data";
 
-const LOGO = "/images/bixyl/Logo.png";
+const LOGO = "/images/bixyl/bixyl-logo-1200x600@2x.png";
 const CTA = { label: "Get a quote", to: "/contact" };
 
 const NAV_FONT = {
@@ -33,21 +33,23 @@ const Brand = ({ isDark, onClick }) => {
 		>
 			{logoFailed ? (
 				// Fallback so the nav never shows a broken image
-				<span className="h-14 w-20 shrink-0 rounded-xl bg-blue-500 flex items-center justify-center">
+				<span className="h-14 w-20 shrink-0 overflow-hidden rounded-xl bg-blue-500 flex items-center justify-center">
 					<Cpu className="w-6 h-6 text-white" />
 				</span>
 			) : (
-				<img
-					src={LOGO}
-					alt={`${siteProfile.name} logo`}
-					className="h-14 w-20 shrink-0 object-contain"
-					onError={() => {
-						console.warn(
-							`[Navbar] Logo failed to load from "${LOGO}". Open that URL directly in the browser to check it.`,
-						);
-						setLogoFailed(true);
-					}}
-				/>
+				<span className="h-14 w-30 shrink-0 overflow-hidden rounded-xl">
+					<img
+						src={LOGO}
+						alt={`${siteProfile.name} logo`}
+						className="h-full w-full object-cover"
+						onError={() => {
+							console.warn(
+								`[Navbar] Logo failed to load from "${LOGO}". Open that URL directly in the browser to check it.`,
+							);
+							setLogoFailed(true);
+						}}
+					/>
+				</span>
 			)}
 
 			<span className="flex flex-col leading-none">

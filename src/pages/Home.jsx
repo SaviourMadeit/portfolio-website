@@ -8,6 +8,7 @@ import {
 	Wrench,
 } from "lucide-react";
 import { Link, useOutletContext } from "react-router-dom";
+import HeroSlider from "../components/HeroSlider";
 import { services, siteProfile } from "../data";
 
 const Home = () => {
@@ -20,74 +21,42 @@ const Home = () => {
 
 	return (
 		<div className="pb-20">
-			<section className="relative isolate overflow-hidden bg-slate-950 px-4 pb-16 pt-32 text-white lg:pb-24 lg:pt-40">
-				<div
-					className="absolute inset-0 -z-20 bg-cover bg-center opacity-35"
-					style={{
-						backgroundImage:
-							"url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=2000&q=85')",
-					}}
-				/>
-				<div className="absolute inset-0 -z-10 bg-gradient-to-r from-slate-950 via-slate-950/90 to-blue-950/65" />
-				<div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-					<div>
-						{/* <p className="inline-flex rounded-full border border-cyan-300/30 bg-cyan-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-200">
-							{siteProfile.name} · Accra, Ghana
-						</p> */}
-						<h1 className="mt-6 max-w-3xl text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-							Technology that works. Support you can count on.
-						</h1>
-						<p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-200 sm:text-xl">
-							From dependable IT and security systems to electrical solutions,
-							live-event technology, and equipment repair, Bixyl Lab helps
-							people and businesses get the right technical support.
-						</p>
-						<div className="mt-8 flex flex-wrap gap-3">
-							<Link
-								to="/services"
-								className="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300"
-							>
-								Explore our services
-								<ArrowRight className="h-4 w-4" />
-							</Link>
-							<Link
-								to="/contact"
-								className="inline-flex items-center gap-2 rounded-full border border-white/40 px-6 py-3 font-semibold text-white transition hover:border-cyan-300 hover:text-cyan-200"
-							>
-								Request a service
-							</Link>
-						</div>
-						<div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-slate-200">
-							<span className="inline-flex items-center gap-2">
-								<Check className="h-4 w-4 text-cyan-300" />
-								Practical, client-focused solutions
-							</span>
-							<span className="inline-flex items-center gap-2">
-								<Check className="h-4 w-4 text-cyan-300" />
-								Support for homes, businesses, and events
-							</span>
-						</div>
+			<section className="relative isolate flex min-h-[min(760px,100svh)] items-center overflow-hidden bg-slate-950 px-4 pb-16 pt-32 text-center text-white sm:pb-20">
+				<HeroSlider />
+				<div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center">
+					<h1 className="max-w-4xl text-balance text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+							Reliable Technology Practical Solutions
+					</h1>
+					<p className="mt-6 max-w-[720px] text-lg leading-relaxed text-slate-200 sm:text-xl">
+						Bixyl Lab IT & Engineering Consult combines practical technical skills in embedded systems, 
+						IT support, security infrastructure, electrical installation, and event technology. 
+						Our work is built on a service mindset, strong troubleshooting ability, and a commitment to 
+						delivering dependable solutions in real environments.
+					</p>
+					<div className="mt-8 flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row">
+						<Link
+							to="/services"
+							className="inline-flex items-center justify-center gap-2 rounded-full bg-cyan-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300"
+						>
+							Explore our services
+							<ArrowRight className="h-4 w-4" />
+						</Link>
+						<Link
+							to="/contact"
+							className="inline-flex items-center justify-center gap-2 rounded-full border border-white/50 px-6 py-3 font-semibold text-white transition hover:border-cyan-300 hover:text-cyan-200"
+						>
+							Request a service
+						</Link>
 					</div>
-
-					<div className="grid gap-4 sm:grid-cols-2">
-						{services.slice(0, 4).map(({ id, title, icon, color }) => (
-							<Link
-								key={id}
-								to={`/services#${id}`}
-								className="group rounded-3xl border border-white/15 bg-slate-900/70 p-5 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-cyan-300/60"
-							>
-								<span
-									className={`inline-flex rounded-2xl bg-gradient-to-r ${color} p-3 text-white`}
-								>
-									{createElement(icon, { className: "h-6 w-6" })}
-								</span>
-								<h2 className="mt-5 text-lg font-semibold text-white">{title}</h2>
-								<span className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-cyan-300">
-									See what we do
-									<ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
-								</span>
-							</Link>
-						))}
+					<div className="mt-8 flex flex-col items-center justify-center gap-x-6 gap-y-3 text-sm text-slate-200 sm:flex-row">
+						<span className="inline-flex items-center gap-2">
+							<Check className="h-4 w-4 text-cyan-300" />
+							Practical, client-focused solutions
+						</span>
+						<span className="inline-flex items-center gap-2">
+							<Check className="h-4 w-4 text-cyan-300" />
+							Support for homes, businesses, and stages
+						</span>
 					</div>
 				</div>
 			</section>

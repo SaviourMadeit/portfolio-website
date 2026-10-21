@@ -25,7 +25,7 @@ const focusRing =
 
 const Footer = ({ isDark }) => {
 	const [logoFailed, setLogoFailed] = useState(false);
-	const logoSrc = "/images/bixyl/Logo.png";
+	const logoSrc = "/images/bixyl/bixyl-logo-1200x600@2x.png";
 
 	const ink = isDark ? "text-white" : "text-slate-900";
 	const muted = isDark ? "text-slate-400" : "text-slate-600";
@@ -69,12 +69,14 @@ const Footer = ({ isDark }) => {
 									<Cpu className="w-6 h-6 text-white" />
 								</span>
 							) : (
-								<img
-									src={logoSrc}
-									alt={`${siteProfile.name} logo`}
-									className="h-14 w-20 shrink-0 object-contain"
-									onError={() => setLogoFailed(true)}
-								/>
+								<span className="h-[60px] w-[120px] shrink-0">
+									<img
+										src={logoSrc}
+										alt={`${siteProfile.name} logo`}
+										className="h-full w-full object-contain"
+										onError={() => setLogoFailed(true)}
+									/>
+								</span>
 							)}
 							<span className="flex flex-col leading-none">
 								<span className={`text-xl font-extrabold tracking-tight ${ink}`}>
