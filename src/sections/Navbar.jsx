@@ -19,7 +19,7 @@ const focusRing =
 	"focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500";
 
 /* ------------------------------------------------------------------ */
-/* Brand: logo followed by the wordmark                                */
+/* Brand logo                                                          */
 /* ------------------------------------------------------------------ */
 const Brand = ({ onClick }) => {
 	const [logoFailed, setLogoFailed] = useState(false);
@@ -28,8 +28,8 @@ const Brand = ({ onClick }) => {
 		<Link
 			to="/"
 			onClick={onClick}
-			aria-label={`${siteProfile.brand}, home`}
-			className={`flex items-center gap-3 rounded-lg ${focusRing}`}
+			aria-label="Home"
+			className={`flex items-center rounded-lg ${focusRing}`}
 		>
 			{logoFailed ? (
 				// Fallback so the nav never shows a broken image
@@ -52,16 +52,6 @@ const Brand = ({ onClick }) => {
 				</span>
 			)}
 
-			<span className="flex flex-col leading-none">
-				<span
-					className="text-base font-extrabold tracking-tight text-slate-900 sm:text-lg"
-				>
-					{siteProfile.name}
-				</span>
-				<span className="mt-1 text-[10px] font-medium tracking-wide text-cyan-500 sm:text-xs">
-					{siteProfile.tagline}
-				</span>
-			</span>
 		</Link>
 	);
 };

@@ -87,10 +87,29 @@ body.dark {
 	animation: marquee-right 34s linear infinite;
 }
 
+@keyframes marquee-left {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+.animate-marquee-left {
+	animation: marquee-left 30s linear infinite;
+}
+
+.animate-marquee-left:hover,
+.animate-marquee-left:focus-within {
+	animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
 	.animate-marquee-up,
 	.animate-marquee-down,
-	.animate-marquee-right {
+	.animate-marquee-right,
+	.animate-marquee-left {
 		animation: none;
 	}
 }

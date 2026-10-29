@@ -10,14 +10,13 @@ const Testimonials = ({ isDark, testimonials }) => {
 					<div className="inline-flex items-center space-x-3 mb-4">
 						<Quote className="w-10 h-10 text-yellow-400" />
 						<h2 className="text-5xl font-bold bg-linear-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
-							What Others Say
+							What our Clients Say
 						</h2>
 					</div>
 					<p
 						className={`text-xl max-w-2xl mx-auto ${isDark ? "text-gray-400" : "text-gray-600"}`}
 					>
-						Testimonials from mentors, colleagues, and those I've
-						helped
+						What our clients say about working with Bixyl Lab
 					</p>
 				</div>
 
@@ -43,11 +42,16 @@ const Testimonials = ({ isDark, testimonials }) => {
 								/>
 
 								{/* Star Rating */}
-								<div className="flex gap-1 mb-4">
+								<div
+									className="flex gap-1 mb-4"
+									role="img"
+									aria-label={`${testimonial.rating} out of 5 stars`}
+								>
 									{[...Array(testimonial.rating)].map(
 										(_, i) => (
 											<span
 												key={i}
+												aria-hidden="true"
 												className="text-yellow-400 text-lg"
 											>
 												★
@@ -65,11 +69,13 @@ const Testimonials = ({ isDark, testimonials }) => {
 
 								{/* Author Info */}
 								<div className="flex items-center space-x-4 pt-6 border-t border-gray-400/20">
-									<img
-										src={testimonial.image}
-										alt={testimonial.name}
-										className="w-12 h-12 rounded-full object-cover"
-									/>
+									{testimonial.image && (
+										<img
+											src={testimonial.image}
+											alt={testimonial.name}
+											className="w-12 h-12 rounded-full object-cover"
+										/>
+									)}
 									<div>
 										<p
 											className={`font-semibold ${isDark ? "text-white" : "text-gray-900"}`}

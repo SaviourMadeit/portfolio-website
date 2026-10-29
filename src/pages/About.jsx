@@ -1,7 +1,6 @@
 import { useOutletContext } from "react-router-dom";
-import { skills, testimonials } from "../data";
+import { skills } from "../data";
 import Skills from "../sections/Skills";
-import Testimonials from "../sections/Testimonials";
 
 const About = () => {
 	const { isDark } = useOutletContext();
@@ -68,9 +67,7 @@ const About = () => {
 					</div>
 				</div>
 			</section>
-
 			<Skills isDark={isDark} skills={skills} />
-			<Testimonials isDark={isDark} testimonials={testimonials} />
 		</>
 	);
 };

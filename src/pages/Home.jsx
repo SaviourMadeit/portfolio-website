@@ -3,13 +3,14 @@ import {
 	ArrowRight,
 	Check,
 	CircleHelp,
-	Clock3,
 	ShieldCheck,
 	Wrench,
 } from "lucide-react";
 import { Link, useOutletContext } from "react-router-dom";
+import { services, testimonials } from "../data";
 import HeroSlider from "../components/HeroSlider";
-import { services, siteProfile } from "../data";
+import ClientLogos from "../sections/ClientLogos";
+import Testimonials from "../sections/Testimonials";
 
 const Home = () => {
 	const { isDark } = useOutletContext();
@@ -172,38 +173,9 @@ const Home = () => {
 				</div>
 			</section>
 
-			<section className="px-4 py-20">
-				<div className="mx-auto flex max-w-6xl flex-col gap-6 rounded-3xl bg-gradient-to-r from-blue-950 via-blue-900 to-cyan-800 p-8 text-white shadow-2xl shadow-blue-950/20 md:flex-row md:items-center md:justify-between md:p-12">
-					<div>
-						{/* <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-200">
-							<Clock3 className="h-4 w-4" />
-							Let’s get started
-						</p> */}
-						<h2 className="mt-3 max-w-2xl text-3xl font-bold">
-							Tell us what you need. We’ll help you find the right solution.
-						</h2>
-						<p className="mt-3 text-blue-100">
-							Contact Us for a service enquiry or project
-							conversation.
-						</p>
-					</div>
-					<div className="flex shrink-0 flex-wrap gap-3">
-						<Link
-							to="/contact"
-							className="inline-flex items-center gap-2 rounded-full bg-cyan-300 px-5 py-3 font-semibold text-slate-950 transition hover:bg-cyan-200"
-						>
-							Contact us
-							<ArrowRight className="h-4 w-4" />
-						</Link>
-						<a
-							href={siteProfile.phoneHref}
-							className="inline-flex items-center rounded-full border border-white/40 px-5 py-3 font-semibold text-white transition hover:border-cyan-200 hover:text-cyan-200"
-						>
-							Call {siteProfile.phone}
-						</a>
-					</div>
-				</div>
-			</section>
+			<ClientLogos isDark={isDark} />
+
+			<Testimonials isDark={isDark} testimonials={testimonials} />
 		</div>
 	);
 };

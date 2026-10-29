@@ -24,6 +24,7 @@ import {
   Wifi,
   Zap,
 } from "lucide-react";
+import ledStrobeThumbnail from "../assets/blog/led-rgb-strobe.webp";
 
 export const siteProfile = {
   name: "Bixyl Lab IT & Engineering Consult",
@@ -98,6 +99,22 @@ export const services = [
     imageAlt: "Modern office workspace ready for reliable IT infrastructure",
     icon: Cpu,
     color: "from-sky-500 to-cyan-500",
+  },
+  {
+    id: "embedded-hardware-firmware",
+    title: "Embedded Hardware & Firmware Development",
+    description:
+      "Custom embedded solutions from circuit-board design to firmware development, helping turn technical requirements into functional electronic prototypes and products.",
+    highlights: ["Custom PCB design", "Firmware development", "Embedded prototyping"],
+    details: [
+      "Custom PCB design for embedded and electronic projects",
+      "Firmware development for microcontrollers and connected devices",
+      "Prototype bring-up, testing, and hardware-software integration",
+    ],
+    image: "/images/projects/STM32F4_Breakout.jpg",
+    imageAlt: "Custom embedded hardware circuit board prototype",
+    icon: CircuitBoard,
+    color: "from-indigo-500 to-blue-500",
   },
   {
     id: "cctv-access-security",
@@ -314,6 +331,7 @@ export const testimonials = [
     name: "Mr. Kofi Boateng",
     title: "Event Coordinator",
     company: "Accra Events Hub",
+    rating: 5,
     testimonial:
       "Bixyl Lab IT & Engineering Consult brought professionalism and reliability to our stage lighting setup. The team understood the event flow and solved issues quickly on site.",
   },
@@ -322,6 +340,7 @@ export const testimonials = [
     name: "Mrs. Afia Mensah",
     title: "Facility Manager",
     company: "Apex Community Centre",
+    rating: 5,
     testimonial:
       "Their security and electrical support helped us improve safety and confidence across our venue. The work was clean, efficient, and well organized.",
   },
@@ -330,6 +349,7 @@ export const testimonials = [
     name: "Mr. Daniel Owusu",
     title: "Business Owner",
     company: "Crestview Studio",
+    rating: 5,
     testimonial:
       "We needed dependable technical support and fast troubleshooting. Bixyl Lab handled everything with practical expertise and excellent communication.",
   },
@@ -382,6 +402,19 @@ export const aboutHighlights = [
 ];
 
 export const blogPosts = [
+  {
+    id: 4,
+    title: "How to Troubleshoot an LED RGB Strobe Light",
+    date: "Oct 23, 2026",
+    category: "Event Technology",
+    readTime: "6 min read",
+    excerpt:
+      "A safety-first checklist for diagnosing no-flash, incorrect color, DMX, flicker, and overheating issues.",
+    image: ledStrobeThumbnail,
+    imageAlt: "Multi-color LED RGB strobe light fixture",
+    gradient: "from-blue-900 to-cyan-700",
+    href: "/blog/how-to-troubleshoot-an-led-rgb-strobe-light",
+  },
   {
     id: 1,
     title: "Getting Started with FreeRTOS on STM32",
