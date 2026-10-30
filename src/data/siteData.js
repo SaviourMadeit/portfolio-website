@@ -86,9 +86,9 @@ export const businessPurpose =
 export const services = [
   {
     id: "it-support",
-    title: "IT Support & Infrastructure",
+    title: "IT & Network Infrastructure Support",
     description:
-      "Reliable IT support for homes, businesses, and event venues, including device setup, system troubleshooting, networking, and infrastructure maintenance.",
+      "Reliable IT support for homes, businesses, and Companys, including Starlink device setup, system troubleshooting, networking, and infrastructure maintenance.",
     highlights: ["Computer support", "Network setup", "System troubleshooting", "IT maintenance"],
     details: [
       "Computer, printer, and business device setup and troubleshooting",
@@ -127,8 +127,8 @@ export const services = [
       "Access control and security system setup",
       "System checks, maintenance, and troubleshooting",
     ],
-    image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=85",
-    imageAlt: "Security camera monitoring a property",
+    image: "/images/clients/CCTV%20Camera.jpg",
+    imageAlt: "CCTV camera for a security installation",
     icon: ShieldCheck,
     color: "from-violet-500 to-fuchsia-500",
   },
@@ -136,7 +136,7 @@ export const services = [
     id: "electrical-power-solutions",
     title: "Electrical & Power Solutions",
     description:
-      "Safe and practical electrical support for homes, offices, commercial sites, and live event spaces with a focus on reliability and protection.",
+      "Safe and practical electrical support for homes, offices, and commercial sites, with a focus on reliability and protection.",
     highlights: ["Electrical works", "Power systems", "Safety checks", "Load planning"],
     details: [
       "Electrical installation and maintenance support",

@@ -6,7 +6,7 @@ import itInfrastructureImage from "../assets/hero/it-support1.webp";
 import securityImage from "../assets/hero/security.webp";
 import technicalSupportImage from "../assets/hero/tech-support-service.webp";
 
-const slides = [
+const homeSlides = [
 	{ src: workshopImage, alt: "Bixyl Lab electronics workshop" },
 	{ src: itInfrastructureImage, alt: "IT specialist configuring business network infrastructure" },
 	{ src: securityImage, alt: "Technician installing a CCTV security camera" },
@@ -20,7 +20,11 @@ const slides = [
 	},
 ];
 
-const HeroSlider = () => {
+const HeroSlider = ({
+	slides = homeSlides,
+	label = "Hero background images",
+	controlsLabel = "Choose hero image",
+}) => {
 	const [activeSlide, setActiveSlide] = useState(0);
 	const [isPaused, setIsPaused] = useState(false);
 	const [prefersReducedMotion, setPrefersReducedMotion] = useState(
@@ -50,7 +54,7 @@ const HeroSlider = () => {
 		}, 5500);
 
 		return () => window.clearInterval(intervalId);
-	}, [isPaused, prefersReducedMotion]);
+	}, [isPaused, prefersReducedMotion, slides.length]);
 
 	const showSlide = (index) => {
 		setActiveSlide((index + slides.length) % slides.length);
@@ -73,7 +77,7 @@ const HeroSlider = () => {
 		<div
 			className="hero-slider"
 			role="group"
-			aria-label="Hero background images"
+			aria-label={label}
 			onMouseEnter={() => setIsPaused(true)}
 			onMouseLeave={() => setIsPaused(false)}
 			onFocus={() => setIsPaused(true)}
@@ -100,7 +104,7 @@ const HeroSlider = () => {
 			<div
 				className="hero-slider__dots"
 				role="group"
-				aria-label="Choose hero image"
+				aria-label={controlsLabel}
 			>
 				{slides.map((slide, index) => (
 					<button

@@ -10,8 +10,7 @@ import { Link, useOutletContext } from "react-router-dom";
 import { services, testimonials } from "../data";
 import HeroSlider from "../components/HeroSlider";
 import ClientLogos from "../sections/ClientLogos";
-import Testimonials from "../sections/Testimonials";
-
+import Testimonials from "../sections/Testimonials"; 
 const Home = () => {
 	const { isDark } = useOutletContext();
 	const ink = isDark ? "text-white" : "text-slate-900";
